@@ -214,6 +214,19 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
+    
+    <!--Google Sheets-->
+<script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzhYwI1gsSANwB-nUie9HO6K-extjzF_TlUJMzAgVaXh0y87Yk-/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting ..! I Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+</script>
 
 </body>
 
