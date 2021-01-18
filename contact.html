@@ -173,7 +173,7 @@
             <!-- Left Side Ends -->
             <!-- Contact Form Starts -->
             <div class="col-12 col-lg-8">
-                <form class="contactform" method="post" name="google-sheet">
+                <form id="contactform" class="contactform" method="post" name="google-sheet">
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
@@ -184,7 +184,7 @@
                             </div>
                             <div class="col-12">
                                 <textarea name="Phone" placeholder="YOUR MESSAGE" value="" required=""></textarea>
-                                <button type="submit" name="submit" value="Login" class="btn btn-contact">Send Message</button>
+                                <button type="submit" onclick="clearForm()" name="submit" value="Login" class="btn btn-contact">Send Message</button>
                             </div>
                             <div class="col-12 form-message">
                                 <span class="output_message text-center font-weight-600 text-uppercase"></span>
@@ -220,9 +220,17 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Thanks for Contacting ..! I Will Contact You Soon..."))
                 .catch(error => console.error('Error!', error.message))
             })
+</script>
+    <!-- Delay and Clear form  -->
+<script>
+        function clearForm() {
+            setTimeout(function () {
+                document.getElementById("contactform").reset();
+            }, 100);
+        }
+
 </script>
 
 </body>
