@@ -187,7 +187,7 @@
                                 <button type="submit" onclick="clearForm()" name="submit" value="Login" class="btn btn-contact">Send Message</button>
                             </div>
                             <div class="col-12 form-message">
-                                <span class="output_message text-center font-weight-600 text-uppercase"></span>
+                                <span id="ppp" class="output_message text-center font-weight-600 text-uppercase"></span>
                             </div>
                         </div>
                     </div>
@@ -229,6 +229,10 @@
             setTimeout(function () {
                 document.getElementById("contactform").reset();
             }, 100);
+            // clear notifier text
+            setTimeout(function () {
+                document.getElementById("ppp").innerHTML = "";
+            }, 1200);
         }
 
 </script>
