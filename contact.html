@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Contact - Shahriar Shafin</title>
+    <title>Contact - Personal Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Template Google Fonts -->
@@ -153,41 +153,44 @@
                 <p class="open-sans-font mb-3">Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
                 <p class="open-sans-font custom-span-contact position-relative">
                     <i class="fa fa-envelope-open position-absolute"></i>
-                    <span class="d-block">mail</span>shafinshahriar340@gmail.com
+                    <span class="d-block">mail me</span>steve@mail.com
                 </p>
                 <p class="open-sans-font custom-span-contact position-relative">
                     <i class="fa fa-phone-square position-absolute"></i>
-                    <span class="d-block">call</span>+8801726610839
+                    <span class="d-block">call me</span>+216 21 184 010
                 </p>
                 <ul class="social list-unstyled pt-1 mb-5">
-                    <li class="facebook"><a title="Facebook" target="_blank" href="https://www.facebook.com/shhriar.shafin"><i class="fa fa-facebook"></i></a>
+                    <li class="facebook"><a title="Facebook" href="#"><i class="fa fa-facebook"></i></a>
                     </li>
-                    <li class="twitter"><a title="Twitter" target="_blank" href="https://twitter.com/shhriar_shafin"><i class="fa fa-twitter"></i></a>
+                    <li class="twitter"><a title="Twitter" href="#"><i class="fa fa-twitter"></i></a>
                     </li>
-                    <li class="youtube"><a title="Youtube" target="_blank" href="https://www.youtube.com/c/ShahriarShafin/videos"><i class="fa fa-youtube"></i></a>
+                    <li class="youtube"><a title="Youtube" href="#"><i class="fa fa-youtube"></i></a>
                     </li>
-                    <li class="dribbble"><a title="Dribbble" target="_blank" href="https://dribbble.com/shahriarshafin/"><i class="fa fa-dribbble"></i></a>
+                    <li class="dribbble"><a title="Dribbble" href="#"><i class="fa fa-dribbble"></i></a>
                     </li>
                 </ul>
             </div>
             <!-- Left Side Ends -->
             <!-- Contact Form Starts -->
             <div class="col-12 col-lg-8">
-                <form id="contactform" class="contactform" method="post" name="google-sheet">
+                <form class="contactform" method="post" action="http://slimhamdi.net/tunis/dark/php/process-form.php">
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <input type="text" name="Name" placeholder="YOUR NAME" value="" required=""/>
+                                <input type="text" name="name" placeholder="YOUR NAME">
                             </div>
                             <div class="col-12 col-md-4">
-                                <input type="email" name="Email" placeholder="YOUR EMAIL" value="" required=""/>
+                                <input type="email" name="email" placeholder="YOUR EMAIL">
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <input type="text" name="subject" placeholder="YOUR SUBJECT">
                             </div>
                             <div class="col-12">
-                                <textarea name="Phone" placeholder="YOUR MESSAGE" value="" required=""></textarea>
-                                <button type="submit" onclick="clearForm()" name="submit" value="Login" class="btn btn-contact">Send Message</button>
+                                <textarea name="message" placeholder="YOUR MESSAGE"></textarea>
+                                <button type="submit" class="btn btn-contact">Send Message</button>
                             </div>
                             <div class="col-12 form-message">
-                                <span id="ppp" class="output_message text-center font-weight-600 text-uppercase"></span>
+                                <span class="output_message text-center font-weight-600 text-uppercase"></span>
                             </div>
                         </div>
                     </div>
@@ -211,31 +214,6 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/custom.js"></script>
-    
-    <!--Google Sheets-->
-<script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzhYwI1gsSANwB-nUie9HO6K-extjzF_TlUJMzAgVaXh0y87Yk-/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .catch(error => console.error('Error!', error.message))
-            })
-</script>
-    <!-- Delay and Clear form  -->
-<script>
-        function clearForm() {
-            setTimeout(function () {
-                document.getElementById("contactform").reset();
-            }, 100);
-            // clear notifier text
-            setTimeout(function () {
-                document.getElementById("ppp").innerHTML = "";
-            }, 1200);
-        }
-
-</script>
 
 </body>
 
