@@ -16,13 +16,13 @@ const Hero = () => {
 					</div>
 				</div>
 
-				<div className='ml-16'>
-					<h2 className='text-3xl font-bold hover-bg mb-5 tracking-widest inline-block'>
+				<div className='ml-0 md:ml-16'>
+					<h2 className='text-3xl font-bold hover-bg mb-5 tracking-widest inline-block cursor-pointer'>
 						Hello!
 					</h2>
 					<h3 className='text-2xl font-normal leading-10'>
 						I am{' '}
-						<span className='font-bold tracking-widest hover-bg'>
+						<span className='font-bold tracking-widest hover-bg cursor-default'>
 							Shahriar Shafin
 						</span>{' '}
 						and Im a<br />

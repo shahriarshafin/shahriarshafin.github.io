@@ -1,4 +1,5 @@
 import Hero from '../components/Hero';
+import Highlights from '../components/Highlights';
 import NavBar from '../components/NavBar';
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
 		<main className=''>
 			<NavBar />
 			<Hero />
+			<Highlights />
 		</main>
 	);
 }
