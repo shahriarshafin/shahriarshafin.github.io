@@ -9,9 +9,9 @@ module.exports = {
 			colors: {
 				'sh-black': '#171923',
 				'sh-white': 'rgba(255, 255, 255, 0.92)',
-				'sh-blue': '#63b3ed;',
+				'sh-blue': '#63b3ed',
 				'sh-dark': '#171923',
-				'sh-dark-500': '#2D3748',
+				'sh-dark-500': 'rgb(26, 32, 44)',
 			},
 		},
 	},

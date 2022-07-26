@@ -12,7 +12,20 @@
 		font-family: 'Cabin', sans-serif;
 	}
 }
-
+.hover-bg {
+	background: linear-gradient(180deg, #63b3ed 0, #63b3ed);
+	background-position: 0 100%;
+	background-position-x: 0px;
+	background-position-y: 100%;
+	background-repeat: repeat-x;
+	background-size: 4px 3px;
+	text-decoration: none;
+	transition: background-size 0.2s;
+	transition: all 0.5s ease-out;
+}
+.hover-bg:hover {
+	background-size: 4px 50px;
+}
 * {
 	/* outline: 1px solid rgba(50, 205, 50, 0.342) !important; */
 }

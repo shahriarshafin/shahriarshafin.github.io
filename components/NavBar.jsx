@@ -5,16 +5,16 @@ import UserImg from '../assets/images/user.png';
 
 const NavBar = () => {
 	return (
-		<nav className='bg-sh-dark-500'>
+		<nav className='bg-sh-dark-500 bg-opacity-80 sticky top-0 z-10 backdrop-filter backdrop-blur-lg  shadow-lg'>
 			<div className='max-w-3xl mx-auto w-full flex justify-between items-center py-3 px-10 md:px-0'>
 				<div className='flex items-center'>
-					<a href='' className='mr-5'>
+					<a href='' className='rounded-full border-2 border-sh-blue flex mr-7'>
 						<Image
 							className='rounded-full'
 							src={UserImg}
 							alt='Picture of the author'
-							width={40}
-							height={40}
+							width={35}
+							height={35}
 						/>
 					</a>
 					<ul className='flex gap-4'>
