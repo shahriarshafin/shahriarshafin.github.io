@@ -3,9 +3,9 @@ import UserImg from '../assets/images/user.png';
 
 const Hero = () => {
 	return (
-		<div className='max-w-3xl mx-auto w-full py-3 px-10 md:px-0 mt-10'>
+		<div className='max-w-[50rem] mx-auto w-full py-3 px-10 md:px-0 mt-10'>
 			<div className='flex items-center justify-center md:flex-row flex-col'>
-				<div className='rounded-full border-[3px] border-sh-blue relative scale-90 hover:scale-100 transition ease-in shadow-lg'>
+				<div className='rounded-full border-[3px] border-sh-blue relative scale-95 hover:scale-100 transition ease-in shadow-lg'>
 					<div className='h-44 w-44'>
 						<Image
 							className='rounded-full w-full h-full'

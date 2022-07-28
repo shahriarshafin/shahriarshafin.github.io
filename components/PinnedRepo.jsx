@@ -2,7 +2,7 @@ import { BiGitRepoForked, BiStar } from 'react-icons/bi';
 import { HiCursorClick } from 'react-icons/hi';
 const PinnedRepo = () => {
 	return (
-		<div className='max-w-3xl mx-auto w-full py-3 px-10 md:px-0 mt-10 space-y-4'>
+		<div className='max-w-[50rem] mx-auto w-full py-3 px-10 md:px-0 mt-10 space-y-4'>
 			<h2 className='mb-2 text-3xl font-bold tracking-widest inline-block decoration-sh-white underline decoration-1 underline-offset-[12px]'>
 				Pinned Repositories
 			</h2>

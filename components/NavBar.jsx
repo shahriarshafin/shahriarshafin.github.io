@@ -1,22 +1,25 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { BsSunFill } from 'react-icons/bs';
 import { FaGithub } from 'react-icons/fa';
 import UserImg from '../assets/images/user.png';
-
 const NavBar = () => {
+	const router = useRouter();
 	return (
 		<nav className='bg-sh-dark-500 bg-opacity-80 sticky top-0 z-10 backdrop-filter backdrop-blur-lg  shadow-lg'>
-			<div className='max-w-3xl mx-auto w-full flex justify-between items-center py-3 px-10 md:px-0'>
+			<div className='max-w-[50rem] mx-auto w-full flex justify-between items-center py-3 px-10 md:px-0'>
 				<div className='flex items-center'>
-					<a href='' className='rounded-full border-2 border-sh-blue flex mr-7'>
-						<Image
-							className='rounded-full'
-							src={UserImg}
-							alt='Picture of the author'
-							width={35}
-							height={35}
-						/>
-					</a>
+					<Link href='/'>
+						<a className='rounded-full border-2 border-sh-blue flex mr-7 w-10 h-10'>
+							<Image
+								className='rounded-full'
+								src={UserImg}
+								alt='Picture of the author'
+								objectFit='contain'
+							/>
+						</a>
+					</Link>
 					<ul className='flex gap-4'>
 						<li>
 							<a
@@ -27,12 +30,17 @@ const NavBar = () => {
 							</a>
 						</li>
 						<li>
-							<a
-								className='text-xl px-2 py-2 rounded-md hover:bg-sh-black hover:text-sh-blue transition ease-in'
-								href='#'
-							>
-								Blog
-							</a>
+							<Link href='/projects'>
+								<a
+									className={
+										router.pathname == '/projects'
+											? 'active'
+											: 'text-xl px-2 py-2 rounded-md hover:bg-sh-black hover:text-sh-blue transition ease-in'
+									}
+								>
+									Projects
+								</a>
+							</Link>
 						</li>
 						<li>
 							<a
