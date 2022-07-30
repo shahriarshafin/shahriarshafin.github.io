@@ -4,12 +4,12 @@ const RepoCard = ({ title, stars, folks, date, des, url }) => {
 	return (
 		<div className='p-4 bg-sh-dark-500 border-2 border-[#2D3748] rounded-lg text-sh-white hover:shadow-lg transition-transform transform ease-in hover:scale-[1.02]'>
 			<article>
-				<header className='flex justify-between items-center'>
+				<header className='flex justify-between items-center mb-2'>
 					<a
 						href={url}
 						target='_blank'
 						rel='noopener noreferrer'
-						className='text-lg font-bold inline-block mb-3 text-sh-blue hover:text-sh-blue-500 transition ease-in'
+						className='text-lg font-bold inline-block text-sh-blue hover:text-sh-blue-500 transition ease-in'
 					>
 						{title}
 					</a>
