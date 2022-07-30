@@ -14,7 +14,7 @@ const webLinks = [
 const NavBar = () => {
 	const router = useRouter();
 	return (
-		<nav className='bg-[#1a202c] bg-opacity-80 sticky top-0 z-10 backdrop-filter backdrop-blur-sm shadow-lg'>
+		<nav className='bg-[#1a202c] bg-opacity-80 sticky top-0 z-20 backdrop-filter backdrop-blur-sm shadow-lg'>
 			<div className='max-w-[50rem] mx-auto w-full flex justify-between items-center py-3 px-10 md:px-0'>
 				<div className='flex items-center'>
 					<Link href='/'>

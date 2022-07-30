@@ -1,5 +1,5 @@
 import Image from 'next/image';
-const ProjectCard = ({ leftAlign, image, title, des, tech1, tech2, tech3 }) => {
+const ProjectCard = ({ leftAlign, image, title, des, tech }) => {
 	return (
 		<div
 			className={
@@ -8,12 +8,12 @@ const ProjectCard = ({ leftAlign, image, title, des, tech1, tech2, tech3 }) => {
 					: 'flex justify-center md:justify-start'
 			}
 		>
-			<article className='indicator'>
+			<article className='relative inline-flex max-w-max'>
 				<header
 					className={
 						leftAlign
-							? 'indicator-item indicator-middle indicator-center flex items-center justify-center ml-0 md:-ml-[22.5rem]'
-							: 'indicator-item indicator-middle indicator-center flex items-center justify-center ml-0 md:ml-[22.5rem]'
+							? 'top-2/4 bottom-2/4 right-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 z-10 absolute flex items-center justify-center ml-0 md:-ml-[22.5rem]'
+							: 'top-2/4 bottom-2/4 right-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 z-10 absolute flex items-center justify-center ml-0 md:ml-[22.5rem]'
 					}
 				>
 					<div>
@@ -23,8 +23,8 @@ const ProjectCard = ({ leftAlign, image, title, des, tech1, tech2, tech3 }) => {
 							rel='noopener noreferrer'
 							className={
 								leftAlign
-									? 'mb-2 text-xl md:text-3xl text-left md:text-left font-bold tracking-widest block'
-									: 'mb-2 text-xl md:text-3xl text-left md:text-right font-bold tracking-widest block'
+									? 'mb-2 text-xl md:text-3xl text-left font-bold tracking-widest block md:text-left '
+									: 'mb-2 text-xl md:text-3xl text-left font-bold tracking-widest block md:text-right '
 							}
 						>
 							{title}
@@ -32,8 +32,8 @@ const ProjectCard = ({ leftAlign, image, title, des, tech1, tech2, tech3 }) => {
 						<div
 							className={
 								leftAlign
-									? 'text-left md:text-left text-xs md:text-base p-4 bg-sh-dark-500 border-2 border-[#2D3748] rounded-lg w-80'
-									: 'text-left md:text-right text-xs md:text-base p-4 bg-sh-dark-500 border-2 border-[#2D3748] rounded-lg w-80'
+									? 'text-left text-xs md:text-base p-4 bg-sh-dark-500 border-2 border-[#2D3748] rounded-lg w-80 md:text-left'
+									: 'text-left text-xs md:text-base p-4 bg-sh-dark-500 border-2 border-[#2D3748] rounded-lg w-80 md:text-right'
 							}
 						>
 							{des}
@@ -41,13 +41,13 @@ const ProjectCard = ({ leftAlign, image, title, des, tech1, tech2, tech3 }) => {
 						<div
 							className={
 								leftAlign
-									? 'flex justify-start gap-5 p-2'
-									: 'flex justify-end gap-5 p-2'
+									? 'flex gap-5 p-2 justify-start'
+									: 'flex gap-5 p-2 justify-end'
 							}
 						>
-							<span>{tech1}</span>
-							<span>{tech2}</span>
-							<span>{tech3}</span>
+							{tech.map((tech, index) => {
+								return <span key={index}>{tech}</span>;
+							})}
 						</div>
 					</div>
 				</header>

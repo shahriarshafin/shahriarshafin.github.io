@@ -10,7 +10,7 @@ const eduInfo = [
 		logo: CPSCS,
 		degree: 'Bachelor of Science, Computer Science & Engineering (CSE)',
 		startDate: '2018',
-		endDate: '2022',
+		endDate: 'Present',
 	},
 	{
 		institution: 'Cantonment Public School & College, BUSMS',

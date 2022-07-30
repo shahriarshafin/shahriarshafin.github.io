@@ -1,5 +1,6 @@
 import Footer from './Footer';
-import NavBar from './Navbar';
+import NavBar from './NavBar';
+
 const PageLayout = ({ children }) => {
 	return (
 		<div>
