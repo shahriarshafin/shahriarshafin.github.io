@@ -45,6 +45,7 @@ const Hero = () => {
 							src={UserImg}
 							alt='Picture of the author'
 							layout='fill'
+							draggable='false'
 						/>
 					</div>
 				</div>
@@ -69,18 +70,18 @@ const Hero = () => {
 						</div>
 					</div>
 
-					<h3 className='text-2xl font-normal leading-10'>
+					<h1 className='text-2xl font-normal leading-10'>
 						I am{' '}
 						<span className='font-bold tracking-widest hover-bg cursor-default'>
 							Shahriar Shafin
 						</span>{' '}
 						and Im a<br />
 						No Stack Developer and an open source lover from Bangladesh
-					</h3>
-					<h3 className='text-2xl font-normal mt-5 leading-10'>
-						This is my digital garden, where I write about the things Im working
-						on and share what Ie learned.
-					</h3>
+						<span className='mt-5 block'>
+							This is my digital garden, where I write about the things Im
+							working on and share what Ie learned.
+						</span>
+					</h1>
 				</div>
 			</div>
 		</section>

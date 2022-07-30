@@ -9,7 +9,7 @@ const RepoCard = ({ title, stars, folks, date, des, url }) => {
 						href={url}
 						target='_blank'
 						rel='noopener noreferrer'
-						className='text-lg font-semibold inline-block mb-3 text-sh-blue hover:text-sh-blue-500 transition ease-in'
+						className='text-lg font-bold inline-block mb-3 text-sh-blue hover:text-sh-blue-500 transition ease-in'
 					>
 						{title}
 					</a>

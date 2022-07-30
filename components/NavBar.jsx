@@ -24,6 +24,7 @@ const NavBar = () => {
 								src={UserImg}
 								alt='Picture of the author'
 								objectFit='contain'
+								draggable='false'
 							/>
 						</a>
 					</Link>
