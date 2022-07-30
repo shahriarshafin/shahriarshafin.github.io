@@ -3,7 +3,7 @@ const ProjectCard = ({ leftAlign, image, title, des, tech1, tech2, tech3 }) => {
 	return (
 		<div
 			className={
-				leftAlign == true
+				leftAlign
 					? 'flex justify-center md:justify-end'
 					: 'flex justify-center md:justify-start'
 			}
@@ -11,7 +11,7 @@ const ProjectCard = ({ leftAlign, image, title, des, tech1, tech2, tech3 }) => {
 			<article className='indicator'>
 				<header
 					className={
-						leftAlign == true
+						leftAlign
 							? 'indicator-item indicator-middle indicator-center flex items-center justify-center ml-0 md:-ml-[22.5rem]'
 							: 'indicator-item indicator-middle indicator-center flex items-center justify-center ml-0 md:ml-[22.5rem]'
 					}
@@ -22,7 +22,7 @@ const ProjectCard = ({ leftAlign, image, title, des, tech1, tech2, tech3 }) => {
 							target='_blank'
 							rel='noopener noreferrer'
 							className={
-								leftAlign == true
+								leftAlign
 									? 'mb-2 text-xl md:text-3xl text-left md:text-left font-bold tracking-widest block'
 									: 'mb-2 text-xl md:text-3xl text-left md:text-right font-bold tracking-widest block'
 							}
@@ -31,7 +31,7 @@ const ProjectCard = ({ leftAlign, image, title, des, tech1, tech2, tech3 }) => {
 						</a>
 						<div
 							className={
-								leftAlign == true
+								leftAlign
 									? 'text-left md:text-left text-xs md:text-base p-4 bg-sh-dark-500 border-2 border-[#2D3748] rounded-lg w-80'
 									: 'text-left md:text-right text-xs md:text-base p-4 bg-sh-dark-500 border-2 border-[#2D3748] rounded-lg w-80'
 							}
@@ -40,7 +40,7 @@ const ProjectCard = ({ leftAlign, image, title, des, tech1, tech2, tech3 }) => {
 						</div>
 						<div
 							className={
-								leftAlign == true
+								leftAlign
 									? 'flex justify-start gap-5 p-2'
 									: 'flex justify-end gap-5 p-2'
 							}

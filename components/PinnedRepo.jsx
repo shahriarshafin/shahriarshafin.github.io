@@ -1,47 +1,42 @@
 import Link from 'next/link';
-import { BiGitRepoForked, BiStar } from 'react-icons/bi';
 import { HiCursorClick } from 'react-icons/hi';
 import Heading from '../utils/Heading';
+import RepoCard from '../utils/RepoCard';
+
+const repoInfo = [
+	{
+		title: 'Create professional portfolio website with Nextjs and ChakraUI',
+		stars: '450',
+		folks: '330',
+		url: 'http://nextjs.org/learn/basics/first-next-app',
+		date: '21st June 2021',
+		des: 'Currently, Im learning Nextjs and Typescript And for learning perspective I decided to rebuilt my',
+	},
+	{
+		title: 'Create professional portfolio website with Nextjs and ChakraUI',
+		stars: '1,0',
+		folks: '75',
+		url: 'http://nextjs.org/learn/basics/first-next-app',
+		date: '21st June 2021',
+		des: 'Currently, Im learning Nextjs and Typescript And for learning perspective I decided to rebuilt my',
+	},
+	{
+		title: 'Create professional portfolio website with Nextjs and ChakraUI',
+		stars: '1,0',
+		folks: '75',
+		url: 'http://nextjs.org/learn/basics/first-next-app',
+		date: '21st June 2021',
+		des: 'Currently, Im learning Nextjs and Typescript And for learning perspective I decided to rebuilt my',
+	},
+];
+
 const PinnedRepo = () => {
 	return (
 		<section>
 			<Heading text='Pinned Repositories' />
-			<div className='space-y-4'>
-				{[1, 2, 3].map((items, index) => {
-					return (
-						<div
-							key={index}
-							className='p-4 bg-sh-dark-500 border-2 border-[#2D3748] rounded-lg text-sh-white hover:shadow-lg transition-transform transform ease-in hover:scale-[1.02]'
-						>
-							<article>
-								<header className='flex justify-between items-center'>
-									<a
-										href='#'
-										className='text-lg font-semibold inline-block mb-3 text-sh-blue hover:text-sh-blue-500 transition ease-in'
-									>
-										Create professional portfolio website with Nextjs and
-										ChakraUI
-									</a>
-									<div className='flex items-center gap-2'>
-										<div className='flex items-center'>
-											<BiStar />
-											<span className='ml-1'>490</span>
-										</div>
-										<div className='flex items-center'>
-											<BiGitRepoForked />
-											<span className='ml-1'>26</span>
-										</div>
-									</div>
-								</header>
-
-								<p>21st June 2021</p>
-								<p>
-									Currently, Im learning Nextjs and Typescript. And for learning
-									perspective I decided to rebuilt my...
-								</p>
-							</article>
-						</div>
-					);
+			<div className='space-y-4 mt-3'>
+				{repoInfo.map((items, index) => {
+					return <RepoCard key={index} {...items} />;
 				})}
 			</div>
 			<div className='flex justify-center'>
