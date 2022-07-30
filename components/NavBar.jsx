@@ -4,10 +4,17 @@ import { useRouter } from 'next/router';
 import { BsSunFill } from 'react-icons/bs';
 import { FaGithub } from 'react-icons/fa';
 import UserImg from '../assets/images/user.png';
+
+const webLinks = [
+	{ name: 'About', path: '/about' },
+	{ name: 'Projects', path: '/projects' },
+	{ name: 'Open Source', path: '/open-source' },
+];
+
 const NavBar = () => {
 	const router = useRouter();
 	return (
-		<nav className='bg-sh-dark-500 bg-opacity-80 sticky top-0 z-10 backdrop-filter backdrop-blur-lg  shadow-lg'>
+		<nav className='bg-[#1a202c] bg-opacity-80 sticky top-0 z-10 backdrop-filter backdrop-blur-sm shadow-lg'>
 			<div className='max-w-[50rem] mx-auto w-full flex justify-between items-center py-3 px-10 md:px-0'>
 				<div className='flex items-center'>
 					<Link href='/'>
@@ -20,51 +27,40 @@ const NavBar = () => {
 							/>
 						</a>
 					</Link>
-					<ul className='flex gap-4'>
-						<li>
-							<a
-								className='text-xl px-2 py-2 rounded-md hover:bg-sh-black hover:text-sh-blue transition ease-in'
-								href='#'
-							>
-								About
-							</a>
-						</li>
-						<li>
-							<Link href='/projects'>
-								<a
-									className={
-										router.pathname == '/projects'
-											? 'active'
-											: 'text-xl px-2 py-2 rounded-md hover:bg-sh-black hover:text-sh-blue transition ease-in'
-									}
-								>
-									Projects
-								</a>
-							</Link>
-						</li>
-						<li>
-							<a
-								className='text-xl px-2 py-2 rounded-md hover:bg-sh-black hover:text-sh-blue transition ease-in'
-								href='#'
-							>
-								Links
-							</a>
-						</li>
-					</ul>
+					<div className='hidden md:block'>
+						<ul className='flex gap-4'>
+							{webLinks.map((link, index) => {
+								return (
+									<li key={index}>
+										<Link href={link.path}>
+											<a
+												className={
+													router.pathname == link.path
+														? 'menu-item active'
+														: 'menu-item'
+												}
+											>
+												{link.name}
+											</a>
+										</Link>
+									</li>
+								);
+							})}
+						</ul>
+					</div>
 				</div>
 				<div className='text-xl flex gap-3 cursor-pointer'>
 					<a
-						className='px-2 py-2 rounded-md hover:bg-sh-black transition ease-in'
-						href=''
+						target='_blank'
+						rel='noopener noreferrer'
+						href='https://github.com/shahriarshafin'
+						className='p-2 rounded-md hover:bg-sh-dark transition ease-in'
 					>
 						<FaGithub />
 					</a>
-					<a
-						className='px-2 py-2 rounded-md hover:bg-sh-black transition ease-in'
-						href=''
-					>
+					<button className='p-2 rounded-md hover:bg-sh-dark transition ease-in'>
 						<BsSunFill />
-					</a>
+					</button>
 				</div>
 			</div>
 		</nav>

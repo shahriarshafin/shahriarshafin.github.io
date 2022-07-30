@@ -7,11 +7,11 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				'sh-black': '#171923',
-				'sh-white': 'rgba(255, 255, 255, 0.92)',
-				'sh-blue': '#63b3ed',
-				'sh-dark': '#171923',
-				'sh-dark-500': 'rgb(26, 32, 44)',
+				'sh-white': '#EDEDEE',
+				'sh-blue': '#1A85FF',
+				'sh-blue-500': '#8AC5EB',
+				'sh-dark': '#2D3748',
+				'sh-dark-500': '#1A202C',
 			},
 		},
 	},
