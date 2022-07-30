@@ -1,8 +1,11 @@
 import Project1 from '../assets/images/project1.png';
 import Project2 from '../assets/images/project2.png';
+import Footer from '../components/Footer';
+import NavBar from '../components/NavBar';
 import Description from '../utils/Description';
 import Heading from '../utils/Heading';
 import ProjectCard from '../utils/ProjectCard';
+
 const projectInfo = [
 	{
 		title: 'RTX Server',
@@ -39,18 +42,28 @@ const projectInfo = [
 ];
 const projects = () => {
 	return (
-		<section>
-			<Heading text='Projects' />
-			<Description text='A selection of projects ve worked on, during my career as a software developer.' />
+		<>
+			<NavBar />
+			<main className='max-w-[50rem] mx-auto w-full py-3 px-10 md:px-0'>
+				<section>
+					<Heading text='Projects' />
+					<Description text='A selection of projects ve worked on, during my career as a software developer.' />
 
-			<div className='space-y-10'>
-				{projectInfo.map((project, index) => {
-					return (
-						<ProjectCard key={index} leftAlign={index % 2 !== 0} {...project} />
-					);
-				})}
-			</div>
-		</section>
+					<div className='space-y-10'>
+						{projectInfo.map((project, index) => {
+							return (
+								<ProjectCard
+									key={index}
+									leftAlign={index % 2 !== 0}
+									{...project}
+								/>
+							);
+						})}
+					</div>
+				</section>
+			</main>
+			<Footer />
+		</>
 	);
 };
 
