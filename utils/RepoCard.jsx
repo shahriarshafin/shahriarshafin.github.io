@@ -1,6 +1,6 @@
 import { BiGitRepoForked, BiStar } from 'react-icons/bi';
 
-const RepoCard = ({ title, stars, folks, date, des, url }) => {
+const RepoCard = ({ title, stars, folks, date, des, url, topicList }) => {
 	return (
 		<div className='p-4 bg-sh-dark-500 border-2 border-[#2D3748] rounded-lg text-sh-white hover:shadow-lg transition-transform transform ease-in hover:scale-[1.02]'>
 			<article>
@@ -25,8 +25,14 @@ const RepoCard = ({ title, stars, folks, date, des, url }) => {
 					</div>
 				</header>
 
-				<p>{date}</p>
 				<p>{des}</p>
+				<p className='flex gap-2 mt-3 cursor-default'>
+					{topicList.map((topic, index) => (
+						<span className='bg-sh-dark rounded-3xl px-2 text-sm' key={index}>
+							{topic}
+						</span>
+					))}
+				</p>
 			</article>
 		</div>
 	);

@@ -17,24 +17,20 @@
 }
 
 @layer components {
-	.hover-bg {
-		background: linear-gradient(180deg, #1a85ff 0, #1a85ff);
-		background-position: 0 100%;
-		background-position-x: 0px;
-		background-position-y: 100%;
-		background-repeat: repeat-x;
-		background-size: 4px 3px;
-		text-decoration: none;
-		transition: all 0.5s ease-out;
+	.animate-up {
+		@apply bg-gradient-to-r from-sh-blue to-sh-blue transition-all duration-700 ease-out !bg-[length:4px_3px] !bg-[0_100%] !bg-repeat-x;
 	}
-	.hover-bg:hover {
-		background-size: 4px 50px;
+	.animate-up:hover {
+		@apply !bg-[length:4px_50px];
 	}
 	.menu-item {
-		@apply text-xl px-2 py-2 rounded-md hover:bg-sh-dark hover:text-sh-blue transition ease-in;
+		@apply text-xl px-2.5 py-1.5 rounded-md hover:bg-sh-dark hover:text-sh-blue transition ease-in;
 	}
 	.active {
 		@apply bg-sh-dark text-sh-blue;
+	}
+	.text-transparent {
+		color: transparent;
 	}
 }
 

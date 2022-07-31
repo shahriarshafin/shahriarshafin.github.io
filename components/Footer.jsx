@@ -1,38 +1,4 @@
-import {
-	FaDribbble,
-	FaFacebook,
-	FaGithub,
-	FaLinkedin,
-	FaRegEnvelope,
-} from 'react-icons/fa';
-
-const socialLinks = [
-	{
-		label: 'Github',
-		icon: <FaGithub />,
-		url: 'https://github.com/shahriarshafin',
-	},
-	{
-		label: 'Linkedin',
-		icon: <FaLinkedin />,
-		url: 'https://www.linkedin.com/in/shahriarshafin/',
-	},
-	{
-		label: 'Dribbble',
-		icon: <FaDribbble />,
-		url: 'https://dribbble.com/shahriarshafin',
-	},
-	{
-		label: 'Facebook',
-		icon: <FaFacebook />,
-		url: 'https://www.facebook.com/shhriar.shafin',
-	},
-	{
-		label: 'Mail to Shafin',
-		icon: <FaRegEnvelope />,
-		url: 'mailto:connect.shafin@gmail.com',
-	},
-];
+import { SocialMedia } from '../data/data';
 
 const Footer = () => {
 	return (
@@ -42,17 +8,17 @@ const Footer = () => {
 					© {new Date().getFullYear()} Shahriar Shafin
 				</p>
 				<div className='flex gap-3 text-lg order-1 md:order-2'>
-					{socialLinks.map((item, index) => {
+					{SocialMedia.map((social, index) => {
 						return (
 							<a
 								key={index}
-								href={item.url}
-								aria-label={item.label}
+								href={social.url}
+								aria-label={social.label}
 								target='_blank'
 								rel='noopener noreferrer'
 								className='p-3 rounded-xl hover:bg-sh-dark hover:text-sh-blue transition ease-in'
 							>
-								{item.icon}
+								{social.icon}
 							</a>
 						);
 					})}

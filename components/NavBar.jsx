@@ -15,7 +15,7 @@ const NavBar = () => {
 	const router = useRouter();
 	return (
 		<nav className='bg-[#1a202c] bg-opacity-80 sticky top-0 z-20 backdrop-filter backdrop-blur-sm shadow-lg'>
-			<div className='max-w-[50rem] mx-auto w-full flex justify-between items-center py-3 px-10 md:px-0'>
+			<div className='max-w-[50rem] mx-auto w-full flex justify-between items-center py-2.5 px-10 md:px-0'>
 				<div className='flex items-center'>
 					<Link href='/'>
 						<a className='rounded-full border-2 border-sh-blue flex mr-7 w-10 h-10'>
@@ -29,7 +29,7 @@ const NavBar = () => {
 						</a>
 					</Link>
 					<div className='hidden md:block'>
-						<ul className='flex gap-4'>
+						<ul className='flex gap-3'>
 							{webLinks.map((link, index) => {
 								return (
 									<li key={index}>
@@ -55,11 +55,11 @@ const NavBar = () => {
 						target='_blank'
 						rel='noopener noreferrer'
 						href='https://github.com/shahriarshafin'
-						className='p-2 rounded-md hover:bg-sh-dark transition ease-in'
+						className='p-3 rounded-xl hover:bg-sh-dark transition ease-in'
 					>
 						<FaGithub />
 					</a>
-					<button className='p-2 rounded-md hover:bg-sh-dark transition ease-in'>
+					<button className='p-3 rounded-xl hover:bg-sh-dark transition ease-in'>
 						<BsSunFill />
 					</button>
 				</div>

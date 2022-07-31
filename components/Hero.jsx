@@ -1,37 +1,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import UserImg from '../assets/images/user.png';
-
-const greetings = [
-	{
-		text: 'Hello',
-		lang: 'English',
-	},
-	{
-		text: 'হ্যালো',
-		lang: 'Bangla',
-	},
-	{
-		text: 'नमस्ते',
-		lang: 'Hindi',
-	},
-	{
-		text: 'السلام عليكم',
-		lang: 'Arabic',
-	},
-	{
-		text: '你好',
-		lang: 'Chinese',
-	},
-	{
-		text: 'Hola',
-		lang: 'Spanish',
-	},
-	{
-		text: 'こんにちは',
-		lang: 'Japanese',
-	},
-];
+import { GrettingList } from '../data/grettings';
 const Hero = () => {
 	const [arrItem, setArrItem] = useState(0);
 
@@ -54,17 +24,17 @@ const Hero = () => {
 						<h2
 							onClick={() => {
 								return setArrItem(
-									arrItem >= greetings.length - 1 ? 0 : arrItem + 1
+									arrItem >= GrettingList.length - 1 ? 0 : arrItem + 1
 								);
 							}}
-							className='text-3xl font-bold hover-bg mb-5 tracking-widest inline-block cursor-pointer select-none'
+							className='text-3xl font-bold animate-up mb-5 tracking-widest inline-block cursor-pointer select-none'
 						>
-							{greetings[arrItem].text}
+							{GrettingList[arrItem].text}
 							<span className='italic'>!</span>
 						</h2>
 						<div className='absolute bottom-0 flex-col items-center hidden mb-14 group-hover:flex'>
 							<span className='relative z-10 p-2 text-xs leading-none text-sh-white whitespace-no-wrap bg-sh-dark shadow-lg rounded-md'>
-								{greetings[arrItem].lang}
+								{GrettingList[arrItem].lang}
 							</span>
 							<div className='w-3 h-3 -mt-2 rotate-45 bg-sh-dark'></div>
 						</div>
@@ -72,7 +42,7 @@ const Hero = () => {
 
 					<h1 className='text-2xl font-normal leading-10'>
 						I am{' '}
-						<span className='font-bold tracking-widest hover-bg cursor-default'>
+						<span className='font-bold tracking-widest animate-up cursor-default'>
 							Shahriar Shafin
 						</span>{' '}
 						and Im a<br />
