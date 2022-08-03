@@ -10,11 +10,9 @@ const projects = () => {
 			<Description text='A selection of projects ve worked on, during my career as a software developer.' />
 
 			<div className='space-y-10'>
-				{ProjectList.map((project, index) => {
-					return (
-						<ProjectCard key={index} leftAlign={index % 2 !== 0} {...project} />
-					);
-				})}
+				{ProjectList.map((project, index) => (
+					<ProjectCard key={index} leftAlign={index % 2 !== 0} {...project} />
+				))}
 			</div>
 		</section>
 	);

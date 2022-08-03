@@ -23,8 +23,8 @@ const ProjectCard = ({ leftAlign, image, title, des, tech }) => {
 							rel='noopener noreferrer'
 							className={
 								leftAlign
-									? 'mb-2 text-xl md:text-3xl text-left font-bold block md:text-left '
-									: 'mb-2 text-xl md:text-3xl text-left font-bold block md:text-right '
+									? 'mb-2 text-xl md:text-3xl text-left font-bold block md:text-left'
+									: 'mb-2 text-xl md:text-3xl text-left font-bold block md:text-right'
 							}
 						>
 							{title}
@@ -41,8 +41,8 @@ const ProjectCard = ({ leftAlign, image, title, des, tech }) => {
 						<div
 							className={
 								leftAlign
-									? 'flex gap-5 p-2 justify-start'
-									: 'flex gap-5 p-2 justify-end'
+									? 'flex gap-5 p-2 text-sh-white-500 cursor-default justify-start'
+									: 'flex gap-5 p-2 text-sh-white-500 cursor-default justify-end'
 							}
 						>
 							{tech.map((tech, index) => (

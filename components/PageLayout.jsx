@@ -2,6 +2,7 @@
 import Meta from '../utils/Meta';
 import Footer from './Footer';
 import NavBar from './NavBar';
+
 const PageLayout = ({ children }) => {
 	return (
 		<>

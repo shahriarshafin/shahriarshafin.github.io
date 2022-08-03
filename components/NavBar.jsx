@@ -18,11 +18,11 @@ const NavBar = () => {
 			<div className='max-w-[50rem] mx-auto w-full flex justify-between items-center py-2.5 px-10 md:px-0'>
 				<div className='flex items-center'>
 					<Link href='/'>
-						<a className='rounded-full border-2 border-sh-blue flex mr-7 w-10 h-10'>
+						<a className='rounded-full border-2 border-sh-blue flex mr-7 w-10 h-10 scale-90 hover:scale-100 transition ease-in'>
 							<Image
 								className='rounded-full'
 								src={UserImg}
-								alt='Picture of the author'
+								alt='ShafinAvatar'
 								objectFit='contain'
 								draggable='false'
 							/>
@@ -30,23 +30,21 @@ const NavBar = () => {
 					</Link>
 					<div className='hidden md:block'>
 						<ul className='flex gap-3'>
-							{webLinks.map((link, index) => {
-								return (
-									<li key={index}>
-										<Link href={link.path}>
-											<a
-												className={
-													router.pathname == link.path
-														? 'menu-item active'
-														: 'menu-item'
-												}
-											>
-												{link.name}
-											</a>
-										</Link>
-									</li>
-								);
-							})}
+							{webLinks.map((link, index) => (
+								<li key={index}>
+									<Link href={link.path}>
+										<a
+											className={
+												router.pathname == link.path
+													? 'menu-item active'
+													: 'menu-item'
+											}
+										>
+											{link.name}
+										</a>
+									</Link>
+								</li>
+							))}
 						</ul>
 					</div>
 				</div>

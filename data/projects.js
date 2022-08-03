@@ -1,5 +1,6 @@
 import Project1 from '../assets/images/project1.png';
 import Project2 from '../assets/images/project2.png';
+
 export const ProjectList = [
 	{
 		title: 'RTX Server',

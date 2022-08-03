@@ -8,20 +8,18 @@ const Footer = () => {
 					© {new Date().getFullYear()} Shahriar Shafin
 				</p>
 				<div className='flex gap-3 text-lg order-1 md:order-2'>
-					{SocialMedia.map((social, index) => {
-						return (
-							<a
-								key={index}
-								href={social.url}
-								aria-label={social.label}
-								target='_blank'
-								rel='noopener noreferrer'
-								className='p-3 rounded-xl hover:bg-sh-dark hover:text-sh-blue transition ease-in'
-							>
-								{social.icon}
-							</a>
-						);
-					})}
+					{SocialMedia.map((social, index) => (
+						<a
+							key={index}
+							href={social.url}
+							aria-label={social.label}
+							target='_blank'
+							rel='noopener noreferrer'
+							className='p-3 rounded-xl hover:bg-sh-dark hover:text-sh-blue transition ease-in'
+						>
+							{social.icon}
+						</a>
+					))}
 				</div>
 			</div>
 		</footer>

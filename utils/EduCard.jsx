@@ -2,22 +2,31 @@ import Image from 'next/image';
 
 const EduCard = ({ institution, logo, degree, startDate, endDate }) => {
 	return (
-		<div className='flex items-center gap-3 p-4 bg-sh-dark-500 border-2 border-[#2D3748] rounded-lg text-sh-white hover:shadow-lg transition-transform transform ease-in hover:scale-[1.02]'>
-			<div className='h-16 w-16'>
-				<Image
-					className=''
-					src={logo}
-					alt='Picture of the author'
-					objectFit='contain'
-					draggable='false'
-				/>
+		<div className='md:flex items-center gap-3 p-4 bg-sh-dark-500 border-2 border-[#2D3748] rounded-lg text-sh-white hover:shadow-lg transition-transform transform ease-in hover:scale-[1.02]'>
+			<div className='flex items-center gap-3'>
+				<div className='flex items-center w-14 h-14 md:w-16 md:h-16'>
+					<Image
+						src={logo}
+						alt={institution}
+						objectFit='contain'
+						draggable='false'
+						layout='fixed'
+					/>
+				</div>
+				<h3 className='md:hidden block text-lg md:text-xl font-bold'>
+					{institution}
+				</h3>
 			</div>
-			<div>
-				<h3 className='text-xl font-bold'>{institution}</h3>
-				<p>{degree}</p>
-				<p className='text-sm'>
-					<span>{startDate}</span> - <span>{endDate}</span>
-				</p>
+			<div className='mt-1'>
+				<div>
+					<h3 className='hidden md:block text-lg md:text-xl font-bold'>
+						{institution}
+					</h3>
+					<p>{degree}</p>
+					<p className='text-sm text-sh-white-500'>
+						<span>{startDate}</span> - <span>{endDate}</span>
+					</p>
+				</div>
 			</div>
 		</div>
 	);

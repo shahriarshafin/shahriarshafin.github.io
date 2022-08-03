@@ -9,6 +9,7 @@ module.exports = {
 		extend: {},
 		colors: {
 			'sh-white': '#EDEDEE',
+			'sh-white-500': '#929A9E',
 			'sh-blue': '#1A85FF',
 			'sh-blue-500': '#8AC5EB',
 			'sh-dark': '#2D3748',

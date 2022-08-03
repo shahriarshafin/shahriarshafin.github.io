@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import UserImg from '../assets/images/user.png';
 import { GrettingList } from '../data/grettings';
+
 const Hero = () => {
 	const [arrItem, setArrItem] = useState(0);
 
@@ -13,7 +14,7 @@ const Hero = () => {
 						<Image
 							className='rounded-full w-full h-full'
 							src={UserImg}
-							alt='Picture of the author'
+							alt='ShafinAvatar'
 							layout='fill'
 							draggable='false'
 						/>

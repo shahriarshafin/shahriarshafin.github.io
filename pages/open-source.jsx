@@ -9,9 +9,9 @@ const openSource = () => {
 			<Heading text='Open Source' />
 			<Description text='This page lists some of the open source repositories I have published or contributed to.' />
 			<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-3'>
-				{RepositoryList.map((items, index) => {
-					return <RepoCard key={index} {...items} />;
-				})}
+				{RepositoryList.map((repo, index) => (
+					<RepoCard key={index} {...repo} />
+				))}
 			</div>
 		</section>
 	);
