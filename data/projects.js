@@ -1,14 +1,14 @@
-import AfkeBooks from '../assets/images/projects/afkebooks.png';
-import BoxOfficeExtra from '../assets/images/projects/box-office-extra.png';
-import DbCoin from '../assets/images/projects/digital-bangladeshi-coin.png';
-import DisnepClone from '../assets/images/projects/disnep-clone.png';
-import EhealthCare from '../assets/images/projects/e-health-care.png';
-import Pirox from '../assets/images/projects/pirox.png';
-import RtxServer from '../assets/images/projects/rtx-server.png';
-import SnippetsTreasury from '../assets/images/projects/snippets-treasury.png';
-import SoftUi from '../assets/images/projects/soft-ui.png';
-import Softavia from '../assets/images/projects/softavia.png';
-import UapCse from '../assets/images/projects/uap-cse.png';
+import AfkeBooks from '../public/assets/images/projects/afkebooks.png';
+import BoxOfficeExtra from '../public/assets/images/projects/box-office-extra.png';
+import DbCoin from '../public/assets/images/projects/digital-bangladeshi-coin.png';
+import DisnepClone from '../public/assets/images/projects/disnep-clone.png';
+import EhealthCare from '../public/assets/images/projects/e-health-care.png';
+import Pirox from '../public/assets/images/projects/pirox.png';
+import RtxServer from '../public/assets/images/projects/rtx-server.png';
+import SnippetsTreasury from '../public/assets/images/projects/snippets-treasury.png';
+import SoftUi from '../public/assets/images/projects/soft-ui.png';
+import Softavia from '../public/assets/images/projects/softavia.png';
+import UapCse from '../public/assets/images/projects/uap-cse.png';
 
 export const ProjectList = [
 	{

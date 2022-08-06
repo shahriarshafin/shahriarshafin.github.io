@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import UserImg from '../assets/images/others/user.png';
 import { GrettingList } from '../data/grettings';
+import UserImg from '../public/assets/images/others/user.png';
 
 const Hero = () => {
 	const [arrItem, setArrItem] = useState(0);

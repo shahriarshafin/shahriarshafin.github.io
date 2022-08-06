@@ -7,10 +7,11 @@ const EduCard = ({ institution, logo, degree, startDate, endDate }) => {
 				<div className='flex items-center w-14 h-14 md:w-16 md:h-16'>
 					<Image
 						src={logo}
-						alt={institution}
+						alt={institution + ' logo'}
 						objectFit='contain'
 						draggable='false'
-						layout='fixed'
+						width={160}
+						height={160}
 					/>
 				</div>
 				<h3 className='md:hidden block text-lg md:text-xl font-bold'>

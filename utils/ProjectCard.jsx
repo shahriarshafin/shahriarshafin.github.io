@@ -52,9 +52,10 @@ const ProjectCard = ({ leftAlign, image, title, des, tech, url }) => {
 						<Image
 							className='w-full h-full rounded-lg'
 							src={image}
-							alt='project screenshot'
+							alt={title + ' image'}
 							objectFit='contain'
 							draggable='false'
+							placeholder='blur'
 						/>
 					</div>
 				</a>

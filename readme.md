@@ -15,24 +15,18 @@
 <!-- skeletob added -->
 <!-- rename image -->
 <!-- projectRepo alignment -->
+<!-- img blur on load  -->
+<!-- addfavicon -->
+<!-- - project image border -->
+<!-- handle error Image with src "/\_next/static/media/ -->
 
-img blur
-footer link color
-addfavicon
-add all data
-remove unneeded data
-favicon
-sitemap
-handle error Image with src "/\_next/static/media/
 nav responsive
-meta
-gretting hover delay
+sitemap
+meta data
 
-- project image border
-  projectcard not fig in sm
-- data gallery
+footer link color
+projectcard not fig in sm
+add readme
 
-  add readme
-
-- day mode
-- love counter
+day mode
+love counter

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FaGithub } from 'react-icons/fa';
-import UserImg from '../assets/images/others/user.png';
+import UserImg from '../public/assets/images/others/user.png';
 // import { BsSunFill } from 'react-icons/bs';
 
 const webLinks = [
