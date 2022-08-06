@@ -8,8 +8,8 @@ const about = () => {
 			<Heading text={'Education'} />
 
 			<div className='space-y-4 mt-3'>
-				{Institutions.map((edu, index) => (
-					<EduCard key={index} {...edu} />
+				{Institutions.map((edu) => (
+					<EduCard key={edu.id} {...edu} />
 				))}
 			</div>
 		</section>

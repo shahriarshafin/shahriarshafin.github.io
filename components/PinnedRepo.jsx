@@ -9,9 +9,7 @@ const PinnedRepo = () => {
 		<section>
 			<Heading text='Pinned Repositories' />
 			<div className='space-y-4 mt-3'>
-				{PinnedRepositories.map((repo, index) => (
-					<RepoCard key={index} {...repo} />
-				))}
+				<RepoCard repos={PinnedRepositories} />
 			</div>
 			<div className='flex justify-center'>
 				<Link href='/open-source'>

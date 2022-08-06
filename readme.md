@@ -1,5 +1,4 @@
 <!-- - gradient -->
-
 <!-- - logo hov effect -->
 <!-- - repoCard sm text size -->
 <!-- - highlight section update -->
@@ -8,24 +7,32 @@
 <!-- mapping item rename -->
 <!-- - google analytics -->
 <!-- img alt -->
+<!-- github api -->
+<!-- github io connect -->
+<!-- custom color code -->
+<!-- -local stroge in gretings -->
+<!-- global animation -->
+<!-- skeletob added -->
+<!-- rename image -->
+<!-- projectRepo alignment -->
 
-custom color code
-global animation
-nav responsive
+img blur
 footer link color
-github api
-
 addfavicon
 add all data
 remove unneeded data
-
-rename image
+favicon
+sitemap
 handle error Image with src "/\_next/static/media/
+nav responsive
+meta
+gretting hover delay
 
 - project image border
-  -local stroge in gretings
   projectcard not fig in sm
-  add readme
 - data gallery
+
+  add readme
+
 - day mode
 - love counter

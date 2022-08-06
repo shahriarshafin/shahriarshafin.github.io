@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import UserImg from '../assets/images/user.png';
+import UserImg from '../assets/images/others/user.png';
 const Meta = () => {
 	const routerPath =
 		useRouter().pathname.replaceAll('/', '').charAt(0).toUpperCase() +

@@ -1,48 +1,43 @@
 import Image from 'next/image';
-const ProjectCard = ({ leftAlign, image, title, des, tech }) => {
+const ProjectCard = ({ leftAlign, image, title, des, tech, url }) => {
 	return (
 		<div
 			className={
-				leftAlign
-					? 'flex justify-center md:justify-end'
-					: 'flex justify-center md:justify-start'
+				'flex justify-center ' +
+				(leftAlign ? 'md:justify-end' : 'md:justify-start')
 			}
 		>
 			<article className='relative inline-flex max-w-max'>
 				<header
 					className={
-						leftAlign
-							? 'top-2/4 bottom-2/4 right-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 z-10 absolute flex items-center justify-center ml-0 md:-ml-[22.5rem]'
-							: 'top-2/4 bottom-2/4 right-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 z-10 absolute flex items-center justify-center ml-0 md:ml-[22.5rem]'
+						'top-2/4 bottom-2/4 right-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 z-10 absolute flex items-center justify-center ml-0 ' +
+						(leftAlign ? 'md:-ml-[22.5rem]' : 'md:ml-[22.5rem]')
 					}
 				>
 					<div>
 						<a
-							href={'/'}
+							href={url}
 							target='_blank'
 							rel='noopener noreferrer'
 							className={
-								leftAlign
-									? 'mb-2 text-xl md:text-3xl text-left font-bold block md:text-left'
-									: 'mb-2 text-xl md:text-3xl text-left font-bold block md:text-right'
+								'mb-2 text-xl md:text-3xl text-left font-bold block ' +
+								(leftAlign ? 'md:text-left' : 'md:text-right')
 							}
 						>
 							{title}
 						</a>
 						<div
 							className={
-								leftAlign
-									? 'text-left text-xs md:text-base p-4 bg-sh-dark-500 border-2 border-[#2D3748] rounded-lg w-80 md:text-left'
-									: 'text-left text-xs md:text-base p-4 bg-sh-dark-500 border-2 border-[#2D3748] rounded-lg w-80 md:text-right'
+								'text-left text-xs md:text-base p-4 bg-sh-dark-500 border-2 border-sh-dark rounded-lg w-80 ' +
+								(leftAlign ? 'md:text-left' : 'md:text-right')
 							}
 						>
 							{des}
 						</div>
 						<div
 							className={
-								leftAlign
-									? 'flex gap-5 p-2 text-sh-white-500 cursor-default justify-start'
-									: 'flex gap-5 p-2 text-sh-white-500 cursor-default justify-end'
+								'flex gap-5 p-2 text-sh-white-500 cursor-default ' +
+								(leftAlign ? 'justify-start' : 'justify-end')
 							}
 						>
 							{tech.map((tech, index) => (
@@ -52,17 +47,17 @@ const ProjectCard = ({ leftAlign, image, title, des, tech }) => {
 					</div>
 				</header>
 
-				<div className='w-96 md:w-[35rem] rounded-lg border-2 border-sh-blue relative scale-[.99] hover:scale-100 transition ease-in shadow-lg'>
-					<a href={'/'} target='_blank' rel='noopener noreferrer'>
+				<a href={url} target='_blank' rel='noopener noreferrer'>
+					<div className='opacity-25 md:opacity-50 hover:opacity-100 w-96 md:w-[35rem] rounded-lg border-2 border-sh-blue relative scale-[.99] hover:scale-100 transition ease-in shadow-lg flex'>
 						<Image
-							className='rounded-lg opacity-25 md:opacity-50 hover:opacity-100 transition ease-in w-full h-full'
+							className='w-full h-full rounded-lg'
 							src={image}
 							alt='project screenshot'
 							objectFit='contain'
 							draggable='false'
 						/>
-					</a>
-				</div>
+					</div>
+				</a>
 			</article>
 		</div>
 	);

@@ -6,12 +6,20 @@ import ProjectCard from '../utils/ProjectCard';
 const projects = () => {
 	return (
 		<section>
-			<Heading text='Projects' />
-			<Description text='A selection of projects ve worked on, during my career as a software developer.' />
+			<Heading text={'Projects'} />
+			<Description
+				text={
+					'Some selected live projects that I worked on during my student days'
+				}
+			/>
 
 			<div className='space-y-10'>
-				{ProjectList.map((project, index) => (
-					<ProjectCard key={index} leftAlign={index % 2 !== 0} {...project} />
+				{ProjectList.map((project) => (
+					<ProjectCard
+						key={project.id}
+						leftAlign={project.id % 2 == 0}
+						{...project}
+					/>
 				))}
 			</div>
 		</section>

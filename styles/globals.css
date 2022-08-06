@@ -4,9 +4,6 @@
 @tailwind utilities;
 
 @layer base {
-	html {
-		@apply scroll-smooth;
-	}
 	body {
 		@apply bg-[#171923] text-sh-white;
 		font-family: 'Cabin', sans-serif;
@@ -18,7 +15,7 @@
 
 @layer components {
 	.animate-up {
-		@apply bg-gradient-to-r from-sh-blue to-sh-blue transition-all duration-700 ease-out !bg-[length:4px_3px] !bg-[0_100%] !bg-repeat-x;
+		@apply transition-all duration-700 ease-out !bg-[length:4px_3px] !bg-[0_100%] !bg-repeat-x;
 	}
 	.animate-up:hover {
 		@apply !bg-[length:4px_50px];

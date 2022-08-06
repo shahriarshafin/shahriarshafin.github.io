@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { BsSunFill } from 'react-icons/bs';
 import { FaGithub } from 'react-icons/fa';
-import UserImg from '../assets/images/user.png';
+import UserImg from '../assets/images/others/user.png';
+// import { BsSunFill } from 'react-icons/bs';
 
 const webLinks = [
 	{ name: 'About', path: '/about' },
@@ -14,11 +14,11 @@ const webLinks = [
 const NavBar = () => {
 	const router = useRouter();
 	return (
-		<nav className='bg-[#1a202c] bg-opacity-80 sticky top-0 z-20 backdrop-filter backdrop-blur-sm shadow-lg'>
-			<div className='max-w-[50rem] mx-auto w-full flex justify-between items-center py-2.5 px-10 md:px-0'>
+		<nav className='bg-sh-dark-500 bg-opacity-80 sticky top-0 z-20 backdrop-filter backdrop-blur-sm shadow-lg'>
+			<div className='max-w-[50rem] mx-auto w-full px-5 py-2.5 md:px-10 lg:px-0 flex justify-between items-center'>
 				<div className='flex items-center'>
 					<Link href='/'>
-						<a className='rounded-full border-2 border-sh-blue flex mr-7 w-10 h-10 scale-90 hover:scale-100 transition ease-in'>
+						<a className='rounded-full border-2 border-sh-blue flex mr-7 w-10 h-10 scale-90 hover:scale-100 transition ease-in select-none'>
 							<Image
 								className='rounded-full'
 								src={UserImg}
@@ -57,9 +57,9 @@ const NavBar = () => {
 					>
 						<FaGithub />
 					</a>
-					<button className='p-3 rounded-xl hover:bg-sh-dark transition ease-in'>
+					{/* <button className='p-3 rounded-xl hover:bg-sh-dark transition ease-in'>
 						<BsSunFill />
-					</button>
+					</button> */}
 				</div>
 			</div>
 		</nav>

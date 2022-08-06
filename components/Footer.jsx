@@ -8,9 +8,9 @@ const Footer = () => {
 					© {new Date().getFullYear()} Shahriar Shafin
 				</p>
 				<div className='flex gap-3 text-lg order-1 md:order-2'>
-					{SocialMedia.map((social, index) => (
+					{SocialMedia.map((social) => (
 						<a
-							key={index}
+							key={social.id}
 							href={social.url}
 							aria-label={social.label}
 							target='_blank'
