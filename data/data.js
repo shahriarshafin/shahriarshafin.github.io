@@ -10,7 +10,7 @@ export const Institutions = [
 	{
 		id: 1,
 		institution: 'University of Asia Pacific',
-		logo: '/assets/images/institutions/cpscs.png',
+		logo: '/assets/images/institutions/uap.png',
 		degree: 'Bachelor of Science, Computer Science & Engineering (CSE)',
 		startDate: '2018',
 		endDate: 'Present',
@@ -26,7 +26,7 @@ export const Institutions = [
 	{
 		id: 3,
 		institution: 'Cantonment Public School & College, Saidpur',
-		logo: '/assets/images/institutions/uap.png',
+		logo: '/assets/images/institutions/cpscs.png',
 		degree: 'Secondary School Certificate, Science',
 		startDate: '2014',
 		endDate: '2016',

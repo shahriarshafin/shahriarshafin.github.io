@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { GrettingList } from '../data/grettings';
-import UserImg from '../public/assets/images/others/user.png';
+import UserImg from '../public/assets/images/icons/icon-565x565.png';
 
 const Hero = () => {
 	const [arrItem, setArrItem] = useState(0);
@@ -58,15 +58,19 @@ const Hero = () => {
 					</div>
 
 					<h1 className='text-2xl font-normal leading-10'>
-						I am{' '}
-						<span className='font-bold tracking-widest animate-up bg-gradient-to-r from-sh-purple to-sh-purple cursor-default select-none'>
-							Shahriar Shafin
-						</span>{' '}
-						and Im a<br />
-						No Stack Developer and an open source lover from Bangladesh
+						<span className='block'>
+							{'I am '}
+							<span className='font-bold tracking-widest animate-up bg-gradient-to-r from-sh-purple to-sh-purple cursor-default select-none'>
+								Shahriar Shafin
+							</span>
+							{', a Web Developer'}
+						</span>
+						{
+							'from Bangladesh who focuses on UI-UX and Frontend Technologies & collaborates to open source projects.'
+						}
 						<span className='mt-5 block'>
-							This is my digital garden, where I write about the things Im
-							working on and share what Ie learned.
+							I am passionate about building excellent software that improves
+							the lives of those around me.
 						</span>
 					</h1>
 				</div>

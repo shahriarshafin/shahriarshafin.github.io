@@ -2,45 +2,45 @@ export const PinnedRepositories = [
 	{
 		id: 1,
 		name: 'shahriarshafin',
-		stargazers_count: '450',
-		forks_count: '330',
-		topics: ['React', 'Node', 'Tailwind'],
-		html_url: 'https://github.com/shahriarshafin',
+		stargazers_count: '15',
+		forks_count: '48',
+		topics: ['github-readme', 'readme-template'],
+		html_url: 'https://github.com/shahriarshafin/shahriarshafin',
 
 		description:
-			"Softavia is a demo project for showcasing a software company's website portfolio or products. Build with React",
+			"😎 Shafin's GitHub readme profile. Feel free to check out the readme file, copy, fork, and use.",
 	},
 	{
 		id: 2,
-		name: 'shahriarshafin',
-		stargazers_count: '450',
-		forks_count: '330',
-		topics: ['React', 'Node', 'Tailwind'],
-		html_url: 'https://github.com/shahriarshafin',
+		name: 'nodemcu-esp8266-fake-sign-in',
+		stargazers_count: '24',
+		forks_count: '10',
+		topics: ['captive-portal', 'ESP8266', 'password phishing'],
+		html_url: 'https://github.com/shahriarshafin/nodemcu-esp8266-fake-sign-in',
 
 		description:
-			"Softavia is a demo project for showcasing a software company's website portfolio or products. Build with React",
+			'🐱‍👤 Email password phishing | WiFi captive portal for ESP8266 | NodeMcu fake login',
 	},
 	{
 		id: 3,
-		name: 'shahriarshafin',
-		stargazers_count: '450',
-		forks_count: '330',
-		topics: ['React', 'Node', 'Tailwind'],
-		html_url: 'https://github.com/shahriarshafin',
+		name: 'shahriarshafin.github.io',
+		stargazers_count: '0',
+		forks_count: '0',
+		topics: ['NextJS', 'Tailwind', 'dev-portfolio'],
+		html_url: 'https://github.com/shahriarshafin/shahriarshafin.github.io',
 
 		description:
-			"Softavia is a demo project for showcasing a software company's website portfolio or products. Build with React",
+			'🚀A portfolio application built by using Next.js, TailwindCSS, Github api, Love!',
 	},
 	{
 		id: 4,
-		name: 'shahriarshafin',
-		stargazers_count: '450',
-		forks_count: '330',
-		topics: ['React', 'Node', 'Tailwind'],
-		html_url: 'https://github.com/shahriarshafin',
+		name: 'Iot-car-controller',
+		stargazers_count: '2',
+		forks_count: '4',
+		topics: ['esp8266-car', 'nodemcu-car-controller'],
+		html_url: 'https://github.com/shahriarshafin/Iot-car-controller',
 
 		description:
-			"Softavia is a demo project for showcasing a software company's website portfolio or products. Build with React",
+			'🚘 A web application that can control NodeMCU - Car via WiFi and stream live footage with IP cam',
 	},
 ];

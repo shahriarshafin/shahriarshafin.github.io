@@ -19,10 +19,13 @@
 <!-- addfavicon -->
 <!-- - project image border -->
 <!-- handle error Image with src "/\_next/static/media/ -->
+<!-- meta data -->
+<!-- robot txt -->
+<!-- sitemap -->
+<!-- xml file -->
 
+skills tab
 nav responsive
-sitemap
-meta data
 
 footer link color
 projectcard not fig in sm

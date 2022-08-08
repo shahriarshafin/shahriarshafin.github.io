@@ -3,7 +3,7 @@ import Script from 'next/script';
 
 export default function Document() {
 	return (
-		<Html lang='en'>
+		<Html itemscope itemtype='http://schema.org/Organization' lang='en'>
 			<Head>
 				<link rel='icon' href='/favicon.ico' />
 				<Script
