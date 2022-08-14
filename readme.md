@@ -55,12 +55,12 @@ npm run dev # or, yarn dev
 That's All! Now open [localhost:3000](http://localhost:3000/) to see the app.
 
 ## Built with
+
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Icon Packs**: [React-Icons](https://react-icons.github.io/react-icons/)
-- **Deployment**: [Vercel](https://vercel.com)
 - **Api**: [Github](https://api.github.com)
-
+- **Deployment**: [Vercel](https://vercel.com)
 
 ## License
 
