@@ -6,6 +6,21 @@ import {
 	FaRegEnvelope,
 } from 'react-icons/fa';
 
+export const GITHUB_API_URL = 'https://api.github.com';
+
+export const GITHUB_USERNAME = 'shahriarshafin';
+
+export const Companies = [
+	{
+		id: 1,
+		institution: 'Pridesys IT Limited',
+		logo: '/assets/images/companies/pridesys.png',
+		degree: 'Software Engineer - Intern',
+		startDate: '2022',
+		endDate: 'Present',
+	},
+];
+
 export const Institutions = [
 	{
 		id: 1,

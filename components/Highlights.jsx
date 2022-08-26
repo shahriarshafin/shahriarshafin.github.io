@@ -1,5 +1,5 @@
 import { highlightList } from '../data/highlights';
-import HighlightPoint from '../utils/HighlightPoint';
+import { HighlightPoint } from '../utils';
 
 const Highlights = () => {
 	return (

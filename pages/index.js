@@ -1,7 +1,4 @@
-import Hero from '../components/Hero';
-import Highlights from '../components/Highlights';
-import PinnedRepo from '../components/PinnedRepo';
-
+import { Hero, Highlights, PinnedRepo } from '../components';
 export default function Home() {
 	return (
 		<>

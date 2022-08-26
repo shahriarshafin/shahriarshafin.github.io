@@ -1,6 +1,9 @@
 {
-	"name": "shahriarshafin.github.io",
+	"name": "myportfolio",
 	"version": "2.1.0",
+	"description": "Shahriar Shafin's website",
+	"author": "Shahriar Shafin",
+	"license": "MIT",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",

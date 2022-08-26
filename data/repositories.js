@@ -23,11 +23,11 @@ export const PinnedRepositories = [
 	},
 	{
 		id: 3,
-		name: 'shahriarshafin.github.io',
+		name: 'myportfolio',
 		stargazers_count: '0',
 		forks_count: '0',
 		topics: ['NextJS', 'Tailwind', 'dev-portfolio'],
-		html_url: 'https://github.com/shahriarshafin/shahriarshafin.github.io',
+		html_url: 'https://github.com/shahriarshafin/myportfolio',
 
 		description:
 			'🚀A portfolio application built by using Next.js, TailwindCSS, Github api, Love!',

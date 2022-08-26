@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { HiCursorClick } from 'react-icons/hi';
 import { PinnedRepositories } from '../data/repositories';
-import Heading from '../utils/Heading';
-import RepoCard from '../utils/RepoCard';
+import { Heading, RepoCard } from '../utils';
 
 const PinnedRepo = () => {
 	return (

@@ -1,9 +1,7 @@
-import Description from '../utils/Description';
-import Heading from '../utils/Heading';
-import RepoCard from '../utils/RepoCard';
-
+import { GITHUB_API_URL, GITHUB_USERNAME } from '../data/data';
+import { Description, Heading, RepoCard } from '../utils';
 export const getStaticProps = async () => {
-	const res = await fetch('https://api.github.com/users/shahriarshafin/repos');
+	const res = await fetch(`${GITHUB_API_URL}/users/${GITHUB_USERNAME}/repos`);
 	let allAlbums = await res.json();
 
 	return {

@@ -21,7 +21,7 @@
 		@apply !bg-[length:4px_50px];
 	}
 	.menu-item {
-		@apply text-xl px-2.5 py-1.5 rounded-md hover:bg-sh-dark hover:text-sh-blue transition ease-in;
+		@apply text-xl px-2.5 py-1.5 rounded-md flex hover:bg-sh-dark hover:text-sh-blue transition ease-in;
 	}
 	.active {
 		@apply bg-sh-dark text-sh-blue;
@@ -29,8 +29,13 @@
 	.text-transparent {
 		color: transparent;
 	}
-}
-
-* {
-	/* outline: 1px solid rgba(50, 205, 50, 0.342) !important; */
+	.dropdown .dropdown-content {
+		@apply invisible absolute;
+	}
+	.dropdown.dropdown-content,
+	.dropdown.dropdown-hover:hover .dropdown-content,
+	.dropdown:not(.dropdown-hover):focus .dropdown-content,
+	.dropdown:not(.dropdown-hover):focus-within .dropdown-content {
+		@apply visible opacity-100;
+	}
 }
