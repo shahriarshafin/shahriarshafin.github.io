@@ -10,6 +10,7 @@ import SoftUi from '../public/assets/images/projects/soft-ui.png';
 import Softavia from '../public/assets/images/projects/softavia.png';
 import UapCse from '../public/assets/images/projects/uap-cse.png';
 import GrammarPathshala from '../public/assets/images/projects/grammar-pathshala.png';
+import Ubot from '../public/assets/images/projects/ubot.png';
 
 export const ProjectList = [
 	{
@@ -105,8 +106,16 @@ export const ProjectList = [
 		id: 12,
 		title: 'Disnep Clone',
 		des: 'Disney+ says is not available in my region. So I clone it with React. Just the Home page is created and the reponsiveness not added.',
-		tech: ['React', 'StyledComponents '],
+		tech: ['React', 'StyledComponents'],
 		url: 'https://clonedisneyplus.netlify.app/',
 		image: DisnepClone,
+	},
+	{
+		id: 13,
+		title: 'Ubot',
+		des: 'Ubot is a chatbot to provide an AI-powered bot to help admitted students get the information they need quickly and easily.',
+		tech: ['React', 'StyledComponents', 'speech-recognition'],
+		url: 'https://ubot.vercel.app/',
+		image: Ubot,
 	},
 ];

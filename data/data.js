@@ -1,6 +1,5 @@
 import {
 	FaDribbble,
-	FaFacebook,
 	FaGithub,
 	FaLinkedin,
 	FaRegEnvelope,
@@ -69,12 +68,6 @@ export const SocialMedia = [
 	},
 	{
 		id: 4,
-		label: 'Facebook',
-		icon: <FaFacebook />,
-		url: 'https://www.facebook.com/shhriar.shafin',
-	},
-	{
-		id: 5,
 		label: 'Mail to Shafin',
 		icon: <FaRegEnvelope />,
 		url: 'mailto:connect.shafin@gmail.com',

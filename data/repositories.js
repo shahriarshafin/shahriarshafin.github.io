@@ -2,8 +2,8 @@ export const PinnedRepositories = [
 	{
 		id: 1,
 		name: 'shahriarshafin',
-		stargazers_count: '15',
-		forks_count: '48',
+		stargazers_count: '21',
+		forks_count: '65',
 		topics: ['github-readme', 'readme-template'],
 		html_url: 'https://github.com/shahriarshafin/shahriarshafin',
 
@@ -13,8 +13,8 @@ export const PinnedRepositories = [
 	{
 		id: 2,
 		name: 'nodemcu-esp8266-fake-sign-in',
-		stargazers_count: '24',
-		forks_count: '10',
+		stargazers_count: '31',
+		forks_count: '11',
 		topics: ['captive-portal', 'ESP8266', 'password phishing'],
 		html_url: 'https://github.com/shahriarshafin/nodemcu-esp8266-fake-sign-in',
 
@@ -34,11 +34,11 @@ export const PinnedRepositories = [
 	},
 	{
 		id: 4,
-		name: 'Iot-car-controller',
-		stargazers_count: '2',
-		forks_count: '4',
+		name: 'ubot',
+		stargazers_count: '0',
+		forks_count: '0',
 		topics: ['esp8266-car', 'nodemcu-car-controller'],
-		html_url: 'https://github.com/shahriarshafin/Iot-car-controller',
+		html_url: 'https://github.com/shahriarshafin/ubot',
 
 		description:
 			'🚘 A web application that can control NodeMCU - Car via WiFi and stream live footage with IP cam',
