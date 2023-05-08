@@ -29,13 +29,4 @@
 	.text-transparent {
 		color: transparent;
 	}
-	.dropdown .dropdown-content {
-		@apply invisible absolute;
-	}
-	.dropdown.dropdown-content,
-	.dropdown.dropdown-hover:hover .dropdown-content,
-	.dropdown:not(.dropdown-hover):focus .dropdown-content,
-	.dropdown:not(.dropdown-hover):focus-within .dropdown-content {
-		@apply visible opacity-100;
-	}
 }
