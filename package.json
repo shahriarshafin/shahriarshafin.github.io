@@ -10,7 +10,7 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"export": "yarn run build && next export"
+		"export": "npm run build && next export"
 	},
 	"dependencies": {
 		"next": "12.2.4",
