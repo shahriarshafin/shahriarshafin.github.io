@@ -4,18 +4,14 @@ import { Description, Heading, ProjectCard } from '../utils';
 const projects = () => {
 	return (
 		<section>
-			<Heading text={'Projects'} />
-			<Description
-				text={
-					'Some selected live projects that I worked on during my student days'
-				}
-			/>
+			<Heading text={'Featured Projects'} />
+			<Description text='Discover a collection of projects highlighting my journey as a web developer' />
 
 			<div className='space-y-10'>
-				{ProjectList.map((project) => (
+				{ProjectList.map((project, idx) => (
 					<ProjectCard
 						key={project.id}
-						leftAlign={project.id % 2 == 0}
+						leftAlign={(idx + 1) % 2 === 0}
 						{...project}
 					/>
 				))}

@@ -2,8 +2,8 @@ export const PinnedRepositories = [
 	{
 		id: 1,
 		name: 'shahriarshafin',
-		stargazers_count: '21',
-		forks_count: '65',
+		stargazers_count: '26',
+		forks_count: '67',
 		topics: ['github-readme', 'readme-template'],
 		html_url: 'https://github.com/shahriarshafin/shahriarshafin',
 
@@ -13,8 +13,8 @@ export const PinnedRepositories = [
 	{
 		id: 2,
 		name: 'nodemcu-esp8266-fake-sign-in',
-		stargazers_count: '31',
-		forks_count: '11',
+		stargazers_count: '39',
+		forks_count: '12',
 		topics: ['captive-portal', 'ESP8266', 'password phishing'],
 		html_url: 'https://github.com/shahriarshafin/nodemcu-esp8266-fake-sign-in',
 
@@ -24,7 +24,7 @@ export const PinnedRepositories = [
 	{
 		id: 3,
 		name: 'myportfolio',
-		stargazers_count: '0',
+		stargazers_count: '3',
 		forks_count: '0',
 		topics: ['NextJS', 'Tailwind', 'dev-portfolio'],
 		html_url: 'https://github.com/shahriarshafin/myportfolio',
@@ -35,8 +35,8 @@ export const PinnedRepositories = [
 	{
 		id: 4,
 		name: 'ubot',
-		stargazers_count: '0',
-		forks_count: '0',
+		stargazers_count: '3',
+		forks_count: '4',
 		topics: ['esp8266-car', 'nodemcu-car-controller'],
 		html_url: 'https://github.com/shahriarshafin/ubot',
 

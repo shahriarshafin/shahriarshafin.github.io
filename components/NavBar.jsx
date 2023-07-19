@@ -15,7 +15,7 @@ const NavBar = () => {
 	];
 
 	return (
-		<div className='bg-sh-dark-500 bg-opacity-80 sticky top-0 z-20 backdrop-filter backdrop-blur-sm shadow-lg'>
+		<div className='bg-sh-dark-500 bg-opacity-80 fixed w-full top-0 z-20 backdrop-filter backdrop-blur-sm shadow-lg mb-28'>
 			<div className='max-w-[50rem] mx-auto w-full px-5 py-2.5 md:px-10 lg:px-0'>
 				<div className='flex items-center w-full'>
 					<div className='w-2/4 justify-start items-center inline-flex'>

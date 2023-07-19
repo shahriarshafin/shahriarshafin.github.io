@@ -6,7 +6,7 @@ const PageLayout = ({ children }) => {
 		<>
 			<Meta />
 			<NavBar />
-			<main className='max-w-[50rem] mx-auto w-full py-3 px-5 md:px-10 lg:px-0'>
+			<main className='max-w-[50rem] mx-auto w-full py-3 px-5 md:px-10 lg:px-0 pt-16'>
 				{children}
 			</main>
 			<Footer />

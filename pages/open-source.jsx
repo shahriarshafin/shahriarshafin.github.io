@@ -14,7 +14,7 @@ const openSource = ({ data }) => {
 	return (
 		<section>
 			<Heading text='Open Source' />
-			<Description text='Some open source repositories I have published or contributed to' />
+			<Description text='Some open source repositories I have published and contributed to' />
 			{<RepoCard repos={data} />}
 		</section>
 	);

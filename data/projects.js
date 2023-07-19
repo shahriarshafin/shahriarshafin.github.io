@@ -11,8 +11,35 @@ import Softavia from '../public/assets/images/projects/softavia.png';
 import UapCse from '../public/assets/images/projects/uap-cse.png';
 import GrammarPathshala from '../public/assets/images/projects/grammar-pathshala.png';
 import Ubot from '../public/assets/images/projects/ubot.png';
+import Rutugo from '../public/assets/images/projects/rutugo.png';
+import ShopBd from '../public/assets/images/projects/shopbd.png';
+import Taskeasy from '../public/assets/images/projects/taskeasy.png';
 
 export const ProjectList = [
+	{
+		id: 4,
+		title: 'Rtx Server',
+		des: 'RTX SERVER is constructed using custom GPU clusters tailored for real-time applications, with a focus on Unreal Engine projects. This serves as the landing page showcasing their specialized services.',
+		tech: ['React', 'Tailwind', 'DaisyUI'],
+		url: 'https://rtxserver.com/',
+		image: RtxServer,
+	},
+	{
+		id: 2,
+		title: 'Rutugo',
+		des: "A travel planning app with personalized tour plans based on users' budgets, preferred themes, group sizes, journey dates etc. Powered by ChatGPT API, Rutugo creates unforgettable vacations tailored specifically for each traveler.",
+		tech: ['ChatGPT', 'NextJS', 'Tailwind'],
+		url: 'https://rutugo.travel/',
+		image: Rutugo,
+	},
+	{
+		id: 2,
+		title: 'Taskeasy',
+		des: 'Taskeasy is a workflow Automation Tool for large and small teams that can connect apps and automate workflows, just like Zapier. It offers a simple setup and allows users to automate processes without a developer.',
+		tech: ['NextJS', 'Automation', 'ReactFlow'],
+		url: 'https://workflow-beta.taskeasy.io/',
+		image: Taskeasy,
+	},
 	{
 		id: 1,
 		title: 'D.B Coin',
@@ -21,8 +48,17 @@ export const ProjectList = [
 		url: 'https://digitalbangladeshicoin.com/',
 		image: DbCoin,
 	},
+
 	{
 		id: 2,
+		title: 'ShopBd',
+		des: 'E-commerce website with mobile friendly view. The website is being built using React, NextJS, Tailwind, DaisyUI.',
+		tech: ['React', 'NextJS', 'Tailwind'],
+		url: 'https://shopbd.vercel.app/',
+		image: ShopBd,
+	},
+	{
+		id: 3,
 		title: 'UAP CSE',
 		des: 'Official website of Computer Science & Engineering department, University of Asia Pacific. The Department of CSE started its journey in 1996 by offering B.Sc. Engg. in CSE.',
 		tech: ['HTML', 'Bootstrap', 'JavaScript'],
@@ -30,23 +66,15 @@ export const ProjectList = [
 		image: UapCse,
 	},
 	{
-		id: 3,
-		title: 'Rtx Server',
-		des: 'RTX SERVER is built with custom GPU clusters for real-time applications, especially for unreal engine projects. I developed the front-end part and the rest is done by the backend.',
-		tech: ['React', 'Tailwind', 'DaisyUI'],
-		url: 'https://rtxserver.com/',
-		image: RtxServer,
-	},
-	{
-		id: 4,
+		id: 5,
 		title: 'Grammar Pathshala',
-		des: 'Grammar Pathshala is a EdTech english grammar learning platform.',
+		des: 'Grammar Pathshala is an EdTech English grammar learning platform where students can learn grammar, test themselves, and receive marks.',
 		tech: ['HTML', 'Tailwind', 'DaisyUI'],
 		url: 'https://grammarpathshala.com/',
 		image: GrammarPathshala,
 	},
 	{
-		id: 5,
+		id: 6,
 		title: 'Box Office',
 		des: 'Online event management platform. They have Ticketing & registration system that allows event organisers to list their upcoming events on the website for their users to register and attend.',
 		tech: ['HTML', 'Bootstrap', 'JavaScript'],
@@ -54,7 +82,7 @@ export const ProjectList = [
 		image: BoxOfficeExtra,
 	},
 	{
-		id: 6,
+		id: 7,
 		title: 'Softavia',
 		des: "Softavia is a demo project for showcasing a software company's website portfolio or products. The UI is designed with the the dark theme and an eye catchy animation is added to the hero section.",
 		tech: ['React', 'ReactBootstrap'],
@@ -62,7 +90,7 @@ export const ProjectList = [
 		image: Softavia,
 	},
 	{
-		id: 7,
+		id: 8,
 		title: 'Soft UI',
 		des: 'The website is based on Neumorphism design concepts, neumorphism is meant to be soft on the eyes. It is a minimal way to design with a soft, extruded plastic look.',
 		tech: ['NextJS', 'StyledComponents'],
@@ -70,50 +98,50 @@ export const ProjectList = [
 		image: SoftUi,
 	},
 	{
-		id: 8,
+		id: 9,
 		title: 'Snippets Treasury',
-		des: 'Snippets Treasury is an easy customizabale code snippets libraly for designers and developers to bulid website faster and easier. Browse, choose and use snippets to reduce your development time.',
+		des: 'Snippets Treasury is an easy customizabale code snippets libraly for designers and developers to bulid website faster and easier.',
 		tech: ['HTML', 'Bootstrap', 'JavaScript'],
 		url: 'https://snippet-treasury.netlify.app/',
 		image: SnippetsTreasury,
 	},
 	{
-		id: 9,
+		id: 10,
 		title: 'AfkeBooks',
-		des: 'AFKebooks is a website dedicated to provide medical books to its members with highest quality and lowest price possible.',
+		des: 'AFKebooks is an outstanding ecommerce book selling platform, providing its members with a diverse selection of medical books to meet their needs.',
 		tech: ['React', 'NextJS', 'MaterialUI'],
 		url: 'https://afkebooks.vercel.app/',
 		image: AfkeBooks,
 	},
 
 	{
-		id: 10,
+		id: 11,
 		title: 'E Health Care',
-		des: "E-Health Care is a web application where users can check their heart condition through this system. If the user's inserted symptoms match the symptoms of a disease, it will advise the associate physician for that disease. [ Frontend ]",
+		des: 'E-Health Care is a web application allowing users to check their heart condition based on their symptoms. If the inserted symptoms match those of a disease, the system will advise consulting with the appropriate physician.',
 		tech: ['HTML', 'Bootstrap', 'JavaScript'],
 		url: 'https://ehealthcare.netlify.app/',
 		image: EhealthCare,
 	},
 	{
-		id: 11,
+		id: 12,
 		title: 'Pirox',
-		des: 'A portfolio website for PIROX  Software Solutions, one of the best software development companies in Bangladesh who provides web development, app development, marketing and etc services.',
+		des: 'A portfolio website for PIROX  Software Solutions for showasing their web development, app development, marketing and etc services.',
 		tech: ['HTML', 'Bootstrap', 'JavaScript'],
 		url: 'https://piroxbd.netlify.app/',
 		image: Pirox,
 	},
 	{
-		id: 12,
+		id: 13,
 		title: 'Disnep Clone',
-		des: 'Disney+ says is not available in my region. So I clone it with React. Just the Home page is created and the reponsiveness not added.',
+		des: 'Disney+ says is not available in my region. As a solution, I have developed a clone of Disney+ landing page using React.',
 		tech: ['React', 'StyledComponents'],
 		url: 'https://clonedisneyplus.netlify.app/',
 		image: DisnepClone,
 	},
 	{
-		id: 13,
-		title: 'Ubot',
-		des: 'Ubot is a chatbot to provide an AI-powered bot to help admitted students get the information they need quickly and easily.',
+		id: 14,
+		title: 'Ubot (UAPBot)',
+		des: 'Ubot is an AI-powered chatbot designed to quickly and easily provide students with the information they need.',
 		tech: ['React', 'StyledComponents', 'speech-recognition'],
 		url: 'https://ubot.vercel.app/',
 		image: Ubot,

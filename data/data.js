@@ -12,11 +12,19 @@ export const GITHUB_USERNAME = 'shahriarshafin';
 export const Companies = [
 	{
 		id: 1,
+		institution: 'Taskeasy Technologies',
+		logo: '/assets/images/companies/taskeasy.png',
+		degree: 'Software Engineer',
+		startDate: 'Apr 2023',
+		endDate: 'Present',
+	},
+	{
+		id: 2,
 		institution: 'Pridesys IT Limited',
 		logo: '/assets/images/companies/pridesys.png',
 		degree: 'Software Engineer - Intern',
-		startDate: '2022',
-		endDate: 'Present',
+		startDate: 'Aug 2022',
+		endDate: 'Nov 2022',
 	},
 ];
 
@@ -27,7 +35,7 @@ export const Institutions = [
 		logo: '/assets/images/institutions/uap.png',
 		degree: 'Bachelor of Science, Computer Science & Engineering (CSE)',
 		startDate: '2018',
-		endDate: 'Present',
+		endDate: '2022',
 	},
 	{
 		id: 2,
