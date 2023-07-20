@@ -48,7 +48,7 @@ const ProjectCard = ({ leftAlign, image, title, des, tech, url }) => {
 				</header>
 
 				<a href={url} target='_blank' rel='noopener noreferrer'>
-					<div className='opacity-25 md:opacity-50 hover:opacity-100 w-96 md:w-[35rem] rounded-lg border-2 border-sh-blue relative scale-[.99] hover:scale-100 transition ease-in shadow-lg flex'>
+					<div className='opacity-25 md:opacity-50 hover:opacity-100 w-96 md:w-[35rem] rounded-lg border-2 bg-sh-blue border-sh-blue relative scale-[.99] hover:scale-100 transition ease-in shadow-lg flex'>
 						<Image
 							className='w-full h-full rounded-lg'
 							src={image}

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { GrettingList } from '../data/grettings';
+import { GreetingList } from '../data/greetings';
 import UserImg from '../public/assets/images/icons/icon-565x565.png';
 
 const Hero = () => {
@@ -9,7 +9,7 @@ const Hero = () => {
 	const nextItem = () => {
 		setArrItem((prevCount) => {
 			const check =
-				prevCount >= GrettingList.length - 1 ? 0 : Number(prevCount) + 1;
+				prevCount >= GreetingList.length - 1 ? 0 : Number(prevCount) + 1;
 			localStorage.setItem('arrItem', check);
 			return check;
 		});
@@ -46,12 +46,12 @@ const Hero = () => {
 							onClick={nextItem}
 							className='text-3xl font-bold animate-up bg-gradient-to-r from-sh-blue to-sh-blue mb-5 tracking-widest inline-block cursor-pointer select-none'
 						>
-							{GrettingList[arrItem].text}
+							{GreetingList[arrItem].text}
 							<span className='italic'>!</span>
 						</h2>
 						<div className='absolute bottom-0 flex-col items-center hidden mb-14 group-hover:flex'>
 							<span className='relative z-10 p-2 text-xs leading-none text-sh-white whitespace-no-wrap bg-sh-dark shadow-lg rounded-md'>
-								{GrettingList[arrItem].lang}
+								{GreetingList[arrItem].lang}
 							</span>
 							<div className='w-3 h-3 -mt-2 rotate-45 bg-sh-dark'></div>
 						</div>
@@ -59,15 +59,14 @@ const Hero = () => {
 
 					<h1 className='text-2xl font-normal leading-10'>
 						<span className='block'>
-							{'I am '}
+							I am{' '}
 							<span className='font-bold tracking-widest animate-up bg-gradient-to-r from-sh-purple to-sh-purple cursor-default select-none'>
 								Shahriar Shafin
 							</span>
-							{', a Web Developer'}
+							, a web developer
 						</span>
-						{
-							'from Bangladesh who focuses on UI-UX and Frontend Technologies & collaborates to open source projects.'
-						}
+						from Bangladesh who focuses on frontend technologies & collaborates
+						to open source projects.
 						<span className='mt-5 block'>
 							I am passionate about building excellent software that improves
 							the lives of those around me.
