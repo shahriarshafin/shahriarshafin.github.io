@@ -7,13 +7,15 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
+		"build": "prisma generate && prisma migrate deploy && next build",
 		"start": "next start",
 		"lint": "next lint",
 		"export": "npm run build && next export"
 	},
 	"dependencies": {
+		"@prisma/client": "^5.0.0",
 		"next": "12.2.4",
+		"next-auth": "^4.22.3",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-icons": "^4.4.0"

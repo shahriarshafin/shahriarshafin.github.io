@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import UserImg from '../public/assets/images/icons/icon-565x565.png';
-import { useState } from 'react';
 const NavBar = () => {
 	const router = useRouter();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,13 +12,14 @@ const NavBar = () => {
 		{ name: 'About', path: '/about' },
 		{ name: 'Projects', path: '/projects' },
 		{ name: 'Open Source', path: '/open-source' },
+		{ name: 'Guestbook', path: '/guestbook' },
 	];
 
 	return (
 		<div className='bg-sh-dark-500 bg-opacity-80 fixed w-full top-0 z-20 backdrop-filter backdrop-blur-sm shadow-lg mb-28'>
 			<div className='max-w-[50rem] mx-auto w-full px-5 py-2.5 md:px-10 lg:px-0'>
 				<div className='flex items-center w-full'>
-					<div className='w-2/4 justify-start items-center inline-flex'>
+					<div className='w-3/4 justify-start items-center inline-flex'>
 						<div className='dropdown'>
 							<label
 								onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -91,7 +92,7 @@ const NavBar = () => {
 						</div>
 					</div>
 
-					<div className='w-2/4 justify-end text-xl flex gap-3'>
+					<div className='w-1/4 justify-end text-xl flex gap-3'>
 						<a
 							target='_blank'
 							aria-label='github link'
