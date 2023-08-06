@@ -41,7 +41,7 @@ const NavBar = () => {
 								</svg>
 							</label>
 							{isMenuOpen && (
-								<ul className='border border-sh-white-500 bg-sh-dark-500 bg-opacity-[0.97] backdrop-filter backdrop-blur-3xl shadow-lg shadow-sh-dark-500 rounded-md absolute mt-3 px-2 py-5 w-64 space-y-5'>
+								<ul className='border border-sh-white-500 bg-sh-dark-500 bg-opacity-[0.97] backdrop-filter shadow-lg shadow-sh-dark-500 rounded-md absolute mt-3 px-2 py-5 w-64 space-y-5'>
 									{webLinks.map((link, index) => (
 										<li key={index} onClick={() => setIsMenuOpen(false)}>
 											<Link href={link.path}>

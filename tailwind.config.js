@@ -16,6 +16,10 @@ module.exports = {
 				'sh-dark': '#2D3748',
 				'sh-dark-500': '#1A202C',
 			},
+			fontFamily: {
+				cabin: ['"Cabin"', 'sans-serif'],
+				montserrat: ['"Montserrat"', 'sans-serif'],
+			},
 		},
 	},
 	plugins: [],

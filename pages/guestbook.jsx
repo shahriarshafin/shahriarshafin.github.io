@@ -1,14 +1,18 @@
 import { PrismaClient } from '@prisma/client';
 import { signOut, useSession } from 'next-auth/react';
 import { useState } from 'react';
+import { CgSpinner } from 'react-icons/cg';
 import { LoginBtn } from '../components';
 import { Heading } from '../utils';
 
-export async function getServerSideProps() {
-	const prisma = new PrismaClient();
-	const contacts = await prisma.guest.findMany();
-	prisma.$disconnect();
+const prisma = new PrismaClient();
 
+export async function getServerSideProps() {
+	const contacts = await prisma.guest.findMany({
+		orderBy: {
+			id: 'desc',
+		},
+	});
 	return {
 		props: {
 			initialContacts: contacts,
@@ -19,9 +23,14 @@ export async function getServerSideProps() {
 const Guestbook = ({ initialContacts }) => {
 	const [guestData, setGuestData] = useState(initialContacts);
 	const { data: session } = useSession();
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+		if (isSubmitting) {
+			return;
+		}
+		setIsSubmitting(true);
 
 		const name = session.user.name;
 		const email = session.user.email;
@@ -29,8 +38,10 @@ const Guestbook = ({ initialContacts }) => {
 		const image_url = session.user.image;
 
 		const userInfo = await signedUser({ name, email, message, image_url });
-		setGuestData([userInfo, ...guestData]);
+
 		e.target.message.value = '';
+		setGuestData([userInfo, ...guestData]);
+		setIsSubmitting(false);
 	};
 
 	const signedUser = async (data) => {
@@ -58,11 +69,20 @@ const Guestbook = ({ initialContacts }) => {
 							placeholder='your message...'
 							className='px-4 py-2 w-full bg-transparent outline-none'
 						/>
-						<input
+						<button
 							type='submit'
-							value='Sign'
-							className='px-8 py-2 rounded bg-sh-dark-500 cursor-pointer'
-						/>
+							className='rounded bg-sh-dark-500 inline-flex items-center py-2 w-32 font-semibold leading-6 text-sm text-center justify-center shadow text-white transition ease-in-out duration-150 cursor-pointer'
+							disabled={isSubmitting}
+						>
+							{isSubmitting ? (
+								<>
+									<CgSpinner className='animate-spin mr-2 h-5 w-5 text-white' />
+									Signing...
+								</>
+							) : (
+								'Sign'
+							)}
+						</button>
 					</form>
 					<button
 						onClick={() => signOut()}
@@ -76,9 +96,9 @@ const Guestbook = ({ initialContacts }) => {
 			)}
 
 			<div className='space-y-2 mt-5'>
-				{guestData.reverse().map((item) => (
+				{guestData.map((item) => (
 					<div key={item.id} className=''>
-						<p className='text-neutral-400 text-md font-light'>
+						<p className='text-neutral-400 text-md font-light font-sans'>
 							{item.name}:<span className='text-sh-white'> {item.message}</span>
 						</p>
 					</div>
