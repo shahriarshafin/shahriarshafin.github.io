@@ -9,7 +9,7 @@ const RepoCard = ({ repos }) => {
 		if (repos) {
 			setTimeout(() => {
 				setLoading(false);
-			}, 1100);
+			}, 500);
 		}
 	}, [repos]);
 
@@ -29,7 +29,7 @@ const RepoCard = ({ repos }) => {
 							key={item.id}
 							className='p-4 bg-sh-dark-500 border-2 border-sh-dark rounded-lg text-sh-white hover:shadow-lg transition-transform transform ease-in hover:scale-[1.02]'
 						>
-							<article>
+							<article className='flex flex-col justify-between h-[7.5rem]'>
 								<header className='flex justify-between items-center mb-2'>
 									<a
 										href={item.html_url}

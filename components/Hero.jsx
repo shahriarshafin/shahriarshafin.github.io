@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { GreetingList } from '../data/greetings';
+import { greetingList } from '../data/greetings';
 import UserImg from '../public/assets/images/icons/icon-565x565.png';
 
 const Hero = () => {
@@ -9,7 +9,7 @@ const Hero = () => {
 	const nextItem = () => {
 		setArrItem((prevCount) => {
 			const check =
-				prevCount >= GreetingList.length - 1 ? 0 : Number(prevCount) + 1;
+				prevCount >= greetingList.length - 1 ? 0 : Number(prevCount) + 1;
 			localStorage.setItem('arrItem', check);
 			return check;
 		});
@@ -46,12 +46,12 @@ const Hero = () => {
 							onClick={nextItem}
 							className='text-3xl font-bold animate-up bg-gradient-to-r from-sh-blue to-sh-blue mb-5 tracking-widest inline-block cursor-pointer select-none'
 						>
-							{GreetingList[arrItem].text}
+							{greetingList[arrItem].text}
 							<span className='italic'>!</span>
 						</h2>
 						<div className='absolute bottom-0 flex-col items-center hidden mb-14 group-hover:flex'>
 							<span className='relative z-10 p-2 text-xs leading-none text-sh-white whitespace-no-wrap bg-sh-dark shadow-lg rounded-md'>
-								{GreetingList[arrItem].lang}
+								{greetingList[arrItem].lang}
 							</span>
 							<div className='w-3 h-3 -mt-2 rotate-45 bg-sh-dark'></div>
 						</div>
@@ -82,7 +82,7 @@ const Hero = () => {
 					className='aspect-[1155/678] w-[70rem] bg-gradient-to-tr from-sh-purple to-sh-blue opacity-[0.15]'
 					style={{
 						clipPath:
-							'polygon(74.1% 44.1%, 90% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 59.5% 27.5%, 74.2% 61.4%, 29.4% 68.1%, 65% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 10.1% 40.9%, 17.9% 100%, 77.6% 78%, 76.1% 83.7%, 86.1% 50%)',
+							'polygon(74.1% 44.1%, 90% 61.6%, 90.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 59.5% 27.5%, 74.2% 61.4%, 29.4% 68.1%, 65% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 10.1% 40.9%, 17.9% 100%, 77.6% 78%, 76.1% 83.7%, 86.1% 50%)',
 					}}
 				/>
 			</div>

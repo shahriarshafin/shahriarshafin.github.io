@@ -1,4 +1,4 @@
-import { SocialMedia } from '../data/data';
+import { socialMedia } from '../data/data';
 
 const Footer = () => {
 	return (
@@ -8,7 +8,7 @@ const Footer = () => {
 					© {new Date().getFullYear()} Shahriar Shafin
 				</p>
 				<div className='flex gap-3 text-lg order-1 md:order-2'>
-					{SocialMedia.map((social) => (
+					{socialMedia.map((social) => (
 						<a
 							key={social.id}
 							href={social.url}

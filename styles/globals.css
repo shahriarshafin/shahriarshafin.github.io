@@ -21,10 +21,10 @@
 		@apply !bg-[length:4px_50px];
 	}
 	.menu-item {
-		@apply text-xl px-2.5 py-1.5 rounded-md flex hover:bg-sh-dark hover:text-sh-blue transition ease-in;
+		@apply text-xl px-2.5 py-1.5 rounded-md flex hover:bg-sh-dark/20 hover:text-sh-blue transition ease-in;
 	}
 	.active {
-		@apply bg-sh-dark text-sh-blue;
+		@apply bg-sh-dark text-sh-blue hover:bg-sh-dark;
 	}
 	.text-transparent {
 		color: transparent;

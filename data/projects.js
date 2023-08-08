@@ -3,17 +3,17 @@ import BoxOfficeExtra from '../public/assets/images/projects/box-office-extra.pn
 import DbCoin from '../public/assets/images/projects/digital-bangladeshi-coin.png';
 import DisnepClone from '../public/assets/images/projects/disnep-clone.png';
 import EhealthCare from '../public/assets/images/projects/e-health-care.png';
+import GrammarPathshala from '../public/assets/images/projects/grammar-pathshala.png';
 import Pirox from '../public/assets/images/projects/pirox.png';
 import RtxServer from '../public/assets/images/projects/rtx-server.png';
+import Rutugo from '../public/assets/images/projects/rutugo.png';
+import ShopBd from '../public/assets/images/projects/shopbd.png';
 import SnippetsTreasury from '../public/assets/images/projects/snippets-treasury.png';
 import SoftUi from '../public/assets/images/projects/soft-ui.png';
 import Softavia from '../public/assets/images/projects/softavia.png';
-import UapCse from '../public/assets/images/projects/uap-cse.png';
-import GrammarPathshala from '../public/assets/images/projects/grammar-pathshala.png';
-import Ubot from '../public/assets/images/projects/ubot.png';
-import Rutugo from '../public/assets/images/projects/rutugo.png';
-import ShopBd from '../public/assets/images/projects/shopbd.png';
 import Taskeasy from '../public/assets/images/projects/taskeasy.png';
+import UapCse from '../public/assets/images/projects/uap-cse.png';
+import Ubot from '../public/assets/images/projects/ubot.png';
 
 export const ProjectList = [
 	{

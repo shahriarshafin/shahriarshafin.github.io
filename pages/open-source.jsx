@@ -1,4 +1,4 @@
-import { GITHUB_API_URL, GITHUB_USERNAME } from '../data/data';
+import { GITHUB_API_URL, GITHUB_USERNAME } from '../config';
 import { Description, Heading, RepoCard } from '../utils';
 export const getStaticProps = async () => {
 	const res = await fetch(`${GITHUB_API_URL}/users/${GITHUB_USERNAME}/repos`);

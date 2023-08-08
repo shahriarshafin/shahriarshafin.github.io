@@ -1,4 +1,4 @@
-export const GreetingList = [
+export const greetingList = [
 	{
 		key: 1,
 		text: 'Hello',

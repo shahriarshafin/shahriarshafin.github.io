@@ -5,11 +5,7 @@ import {
 	FaRegEnvelope,
 } from 'react-icons/fa';
 
-export const GITHUB_API_URL = 'https://api.github.com';
-
-export const GITHUB_USERNAME = 'shahriarshafin';
-
-export const Companies = [
+export const companies = [
 	{
 		id: 1,
 		institution: 'Taskeasy Technologies',
@@ -28,7 +24,7 @@ export const Companies = [
 	},
 ];
 
-export const Institutions = [
+export const institutions = [
 	{
 		id: 1,
 		institution: 'University of Asia Pacific',
@@ -55,7 +51,7 @@ export const Institutions = [
 	},
 ];
 
-export const SocialMedia = [
+export const socialMedia = [
 	{
 		id: 1,
 		label: 'Github',

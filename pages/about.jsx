@@ -1,5 +1,5 @@
-import { Companies, Institutions } from '../data/data';
-import { Skills } from '../data/skills';
+import { companies, institutions } from '../data/data';
+import { skills } from '../data/skills';
 import { EduCard, Heading, SkillCap } from '../utils';
 
 const about = () => {
@@ -9,7 +9,7 @@ const about = () => {
 				<Heading text={'Tech Stack'} />
 
 				<div className='mt-3 lg:px-5 w-full flex flex-wrap gap-4'>
-					{Skills.map((item) => (
+					{skills.map((item) => (
 						<SkillCap key={item.id} {...item} />
 					))}
 				</div>
@@ -19,7 +19,7 @@ const about = () => {
 				<Heading text={'Career'} />
 
 				<div className='space-y-4 mt-3 lg:px-5'>
-					{Companies.map((edu) => (
+					{companies.map((edu) => (
 						<EduCard key={edu.id} {...edu} />
 					))}
 				</div>
@@ -29,7 +29,7 @@ const about = () => {
 				<Heading text={'Education'} />
 
 				<div className='space-y-4 mt-3 lg:px-5'>
-					{Institutions.map((edu) => (
+					{institutions.map((edu) => (
 						<EduCard key={edu.id} {...edu} />
 					))}
 				</div>
