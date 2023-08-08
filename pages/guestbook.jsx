@@ -7,7 +7,7 @@ import { Heading } from '../utils';
 
 const prisma = new PrismaClient();
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 	const contacts = await prisma.guest.findMany({
 		orderBy: {
 			id: 'desc',
