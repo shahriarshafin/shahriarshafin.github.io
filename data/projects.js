@@ -15,7 +15,7 @@ import Taskeasy from '../public/assets/images/projects/taskeasy.png';
 import UapCse from '../public/assets/images/projects/uap-cse.png';
 import Ubot from '../public/assets/images/projects/ubot.png';
 
-export const ProjectList = [
+export const projectList = [
 	{
 		id: 1,
 		title: 'Rtx Server',

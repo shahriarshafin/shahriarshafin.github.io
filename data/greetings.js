@@ -1,38 +1,38 @@
 export const greetingList = [
 	{
 		key: 1,
+		text: 'こんにちは',
+		lang: 'Japanese',
+	},
+	{
+		key: 2,
 		text: 'Hello',
 		lang: 'English',
 	},
 	{
-		key: 2,
+		key: 3,
 		text: 'হ্যালো',
 		lang: 'Bangla',
 	},
 	{
-		key: 3,
+		key: 4,
 		text: 'नमस्ते',
 		lang: 'Hindi',
 	},
 	{
-		key: 4,
+		key: 5,
 		text: 'السلام عليكم',
 		lang: 'Arabic',
 	},
 	{
-		key: 5,
+		key: 6,
 		text: '你好',
 		lang: 'Chinese',
 	},
 	{
-		key: 6,
+		key: 7,
 		text: 'Hola',
 		lang: 'Spanish',
-	},
-	{
-		key: 7,
-		text: 'こんにちは',
-		lang: 'Japanese',
 	},
 	{
 		key: 8,

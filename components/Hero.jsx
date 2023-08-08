@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { greetingList } from '../data/greetings';
 import UserImg from '../public/assets/images/icons/icon-565x565.png';
 
@@ -7,18 +7,9 @@ const Hero = () => {
 	const [arrItem, setArrItem] = useState(0);
 
 	const nextItem = () => {
-		setArrItem((prevCount) => {
-			const check =
-				prevCount >= greetingList.length - 1 ? 0 : Number(prevCount) + 1;
-			localStorage.setItem('arrItem', check);
-			return check;
-		});
+		const check = (arrItem + 1) % greetingList.length;
+		setArrItem(check);
 	};
-
-	useEffect(() => {
-		const initialValue = localStorage.getItem('arrItem');
-		if (initialValue) setArrItem(initialValue);
-	}, []);
 
 	return (
 		<section>

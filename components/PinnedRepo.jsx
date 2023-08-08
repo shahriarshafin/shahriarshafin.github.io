@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { HiCursorClick } from 'react-icons/hi';
 import { GITHUB_API_URL, GITHUB_USERNAME } from '../config';
-import { featuredRepositories } from '../data/repositories';
+import { featuredRepositories } from '../data/data';
 import { Heading, RepoCard } from '../utils';
 
 const PinnedRepo = () => {

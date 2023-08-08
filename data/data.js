@@ -5,6 +5,13 @@ import {
 	FaRegEnvelope,
 } from 'react-icons/fa';
 
+export const featuredRepositories = [
+	'shahriarshafin',
+	'nodemcu-esp8266-fake-sign-in',
+	'myportfolio',
+	'snippets-treasury',
+];
+
 export const companies = [
 	{
 		id: 1,

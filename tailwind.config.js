@@ -18,7 +18,6 @@ module.exports = {
 			},
 			fontFamily: {
 				cabin: ['"Cabin"', 'sans-serif'],
-				montserrat: ['"Montserrat"', 'sans-serif'],
 			},
 		},
 	},
