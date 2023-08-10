@@ -3,7 +3,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
+import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import UserImg from '../public/assets/images/icons/icon-565x565.png';
+
 const NavBar = () => {
 	const router = useRouter();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,22 +25,9 @@ const NavBar = () => {
 						<div className='dropdown'>
 							<label
 								onClick={() => setIsMenuOpen(!isMenuOpen)}
-								className='lg:hidden'
+								className='md:hidden'
 							>
-								<svg
-									xmlns='http://www.w3.org/2000/svg'
-									className='bg-sh-dark p-2 rounded-lg h-9 w-9 mr-5 cursor-pointer'
-									fill='none'
-									viewBox='0 0 24 24'
-									stroke='currentColor'
-								>
-									<path
-										strokeLinecap='round'
-										strokeLinejoin='round'
-										strokeWidth={2}
-										d='M4 6h16M4 12h8m-8 6h16'
-									/>
-								</svg>
+								<HiOutlineMenuAlt1 className='bg-sh-dark p-2 rounded-lg h-9 w-9 mr-5 cursor-pointer' />
 							</label>
 							{isMenuOpen && (
 								<ul className='border border-sh-white-500 bg-sh-dark-500 bg-opacity-[0.97] backdrop-filter shadow-lg shadow-sh-dark-500 rounded-md absolute mt-3 px-2 py-5 w-64 space-y-5'>
@@ -71,7 +60,7 @@ const NavBar = () => {
 								/>
 							</a>
 						</Link>
-						<div className='hidden lg:flex'>
+						<div className='hidden md:flex'>
 							<ul className='inline-flex flex-row gap-3'>
 								{webLinks.map((link, index) => (
 									<li key={index}>

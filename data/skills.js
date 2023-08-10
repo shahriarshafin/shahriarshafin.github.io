@@ -1,13 +1,18 @@
 export const skills = [
 	{
+		id: 5,
+		name: 'Figma',
+		logo: '/assets/images/skills/figma.png',
+	},
+	{
 		id: 1,
-		name: 'HTML5',
-		logo: '/assets/images/skills/html-5.png',
+		name: 'HTML',
+		logo: '/assets/images/skills/html.png',
 	},
 	{
 		id: 2,
-		name: 'CSS3',
-		logo: '/assets/images/skills/css3.png',
+		name: 'CSS',
+		logo: '/assets/images/skills/css.png',
 	},
 	{
 		id: 3,
@@ -18,11 +23,6 @@ export const skills = [
 		id: 4,
 		name: 'TailwindCSS',
 		logo: '/assets/images/skills/tailwindcss.png',
-	},
-	{
-		id: 5,
-		name: 'Figma',
-		logo: '/assets/images/skills/figma.png',
 	},
 	{
 		id: 6,
@@ -39,11 +39,11 @@ export const skills = [
 		name: 'VS Code',
 		logo: '/assets/images/skills/vscode.png',
 	},
-	{
-		id: 9,
-		name: 'Python',
-		logo: '/assets/images/skills/python.png',
-	},
+	// {
+	// 	id: 9,
+	// 	name: 'Python',
+	// 	logo: '/assets/images/skills/python.png',
+	// },
 	{
 		id: 10,
 		name: 'JavaScript',
@@ -58,5 +58,10 @@ export const skills = [
 		id: 12,
 		name: 'Next.js',
 		logo: '/assets/images/skills/nextjs.png',
+	},
+	{
+		id: 13,
+		name: 'Prisma',
+		logo: '/assets/images/skills/prisma.png',
 	},
 ];

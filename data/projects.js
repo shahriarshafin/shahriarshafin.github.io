@@ -72,14 +72,14 @@ export const projectList = [
 		url: 'https://grammarpathshala.com/',
 		image: GrammarPathshala,
 	},
-	{
-		id: 8,
-		title: 'Box Office',
-		des: 'Online event management platform. They have Ticketing & registration system that allows event organisers to list their upcoming events on the website for their users to register and attend.',
-		tech: ['HTML', 'Bootstrap', 'JavaScript'],
-		url: 'http://boxofficeextra.com/',
-		image: BoxOfficeExtra,
-	},
+	// {
+	// 	id: 8,
+	// 	title: 'Box Office',
+	// 	des: 'Online event management platform. They have Ticketing & registration system that allows event organisers to list their upcoming events on the website for their users to register and attend.',
+	// 	tech: ['HTML', 'Bootstrap', 'JavaScript'],
+	// 	url: 'http://boxofficeextra.com/',
+	// 	image: BoxOfficeExtra,
+	// },
 	{
 		id: 9,
 		title: 'Softavia',
@@ -101,7 +101,7 @@ export const projectList = [
 		title: 'Snippets Treasury',
 		des: 'Snippets Treasury is an easy customizabale code snippets libraly for designers and developers to bulid website faster and easier.',
 		tech: ['HTML', 'Bootstrap', 'JavaScript'],
-		url: 'https://snippet-treasury.netlify.app/',
+		url: 'https://snippetstreasury.vercel.app/',
 		image: SnippetsTreasury,
 	},
 	{
@@ -117,7 +117,7 @@ export const projectList = [
 		title: 'E Health Care',
 		des: 'E-Health Care is a web application allowing users to check their heart condition based on their symptoms. If the inserted symptoms match those of a disease, the system will advise consulting with the appropriate physician.',
 		tech: ['HTML', 'Bootstrap', 'JavaScript'],
-		url: 'https://ehealthcare.netlify.app/',
+		url: 'https://e-health-care.vercel.app/',
 		image: EhealthCare,
 	},
 	{
@@ -125,7 +125,7 @@ export const projectList = [
 		title: 'Pirox',
 		des: 'A portfolio website for PIROX  Software Solutions for showasing their web development, app development, marketing and etc services.',
 		tech: ['HTML', 'Bootstrap', 'JavaScript'],
-		url: 'https://piroxbd.netlify.app/',
+		url: 'https://pirox.vercel.app/',
 		image: Pirox,
 	},
 	{
