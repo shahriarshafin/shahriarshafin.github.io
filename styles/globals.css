@@ -29,4 +29,35 @@
 	.text-transparent {
 		color: transparent;
 	}
+	.wrap-avater {
+		--f: 1; /* initial scale */
+		@apply w-[200px] aspect-square pt-10 outline outline-offset-[-3px] outline-sh-blue rounded-[0_0_999px_999px] outline-[3px] duration-500;
+
+		background: radial-gradient(
+				circle closest-side,
+				#8e80c9 calc(99% - 3px),
+				#1985ff calc(100% - 3px) 99%,
+				#0000
+			)
+			50% / calc(100% / var(--f)) 100% no-repeat content-box;
+
+		mask: linear-gradient(#000 0 0) no-repeat 50% 6px / calc(100% - 12px) 50%,
+			radial-gradient(circle closest-side, #000 99%, #0000) 50% /
+				calc(100% / var(--f)) 100% no-repeat content-box;
+
+		transform: scale(var(--f));
+	}
+	.wrap-avater:hover {
+		--f: 1.1;
+		background: radial-gradient(
+				circle closest-side,
+				#474064 calc(99% - 2px),
+				#1985ff calc(100% - 2px) 99%,
+				#0000
+			)
+			50% / calc(100% / var(--f)) 100% no-repeat content-box;
+	}
+	.wrap-avater img {
+		@apply group-hover:drop-shadow-[-1px_-1px_0px_#ec4899] duration-500;
+	}
 }

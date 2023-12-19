@@ -35,21 +35,22 @@ const Hero = () => {
 	return (
 		<section>
 			<div className='flex items-center justify-center md:flex-row flex-col'>
-				<div className='my-5'>
-					<div className='relative h-44 w-44 rounded-full bg-gradient-to-b bg-[#8e7fc9] hover:from-pink-500 hover:to-[#f5d498] flex justify-center items-center'>
+				<div className='my-16'>
+					<div className='relative h-44 w-44 flex justify-center items-center'>
 						<div
 							onMouseEnter={handleMouseEnter}
 							onMouseLeave={handleMouseLeave}
-							className='group absolute -top-[64px] transition-all duration-200 scale-100 hover:scale-110 ease-in'
+							className='group absolute transition-all ease-in'
 						>
-							<Image
-								src={UserImg}
-								draggable='false'
-								// layout='fill'
-								alt='ShafinAvatar'
-								className='drop-shadow-md'
-							/>
-							<div className='absolute bottom-0 flex-col items-center hidden w-32 -ml-24 mb-48 lg:group-hover:flex'>
+							<div className='wrap-avater'>
+								<Image
+									src={UserImg}
+									alt='Avatar'
+									draggable='false'
+									className='!mb-6'
+								/>
+							</div>
+							<div className='absolute bottom-0 flex-col items-center hidden w-32 -ml-[100px] mb-64 lg:group-hover:flex'>
 								<span className='p-2 w-32 h-[50px] relative z-10 text-xs leading-none text-sh-white whitespace-no-wrap bg-sh-dark shadow-lg rounded-md'>
 									{typedText}
 								</span>
