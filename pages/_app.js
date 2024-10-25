@@ -1,4 +1,4 @@
-import { SessionProvider } from 'next-auth/react';
+// import { SessionProvider } from 'next-auth/react';
 import { useEffect } from 'react';
 import { PageLayout } from '../components';
 import '../styles/globals.css';
@@ -11,11 +11,11 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
 	// }, []);
 
 	return (
-		<SessionProvider session={session}>
-			<PageLayout>
-				<Component {...pageProps} />
-			</PageLayout>
-		</SessionProvider>
+		// <SessionProvider session={session}>
+		<PageLayout>
+			<Component {...pageProps} />
+		</PageLayout>
+		// </SessionProvider>
 	);
 }
 

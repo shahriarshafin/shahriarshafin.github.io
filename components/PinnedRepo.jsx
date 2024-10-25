@@ -31,21 +31,23 @@ const PinnedRepo = () => {
 		fetchRepositoriesData();
 	}, []);
 	return (
-		<section>
-			<Heading text='Featured Repositories' />
-			<div className='space-y-4 mt-3'>
+        (<section>
+            <Heading text='Featured Repositories' />
+            <div className='space-y-4 mt-3'>
 				<RepoCard repos={repositories} />
 			</div>
-			<div className='flex justify-center'>
-				<Link href='/open-source'>
-					<a className='gap-2 text-sh-blue hover:text-sh-blue-500 text-base mt-10 transition ease-in w-auto flex justify-center'>
-						<p>More Repositories</p>
-						<HiCursorClick className='text-xl inline-block' />
-					</a>
-				</Link>
+            <div className='flex justify-center'>
+				<Link
+                    href='/open-source'
+                    className='gap-2 text-sh-blue hover:text-sh-blue-500 text-base mt-10 transition ease-in w-auto flex justify-center'>
+
+                    <p>More Repositories</p>
+                    <HiCursorClick className='text-xl inline-block' />
+
+                </Link>
 			</div>
-		</section>
-	);
+        </section>)
+    );
 };
 
 export default PinnedRepo;

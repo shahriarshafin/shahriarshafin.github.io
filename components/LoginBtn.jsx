@@ -1,11 +1,11 @@
-import { signIn, signOut, useSession } from 'next-auth/react';
+// import { signIn, signOut, useSession } from 'next-auth/react';
 import { FaGithub } from 'react-icons/fa';
 
 export default function Component() {
-	const { data: session } = useSession();
-	if (session) {
-		return <button onClick={() => signOut()}>Sign out</button>;
-	}
+	// const { data: session } = useSession();
+	// if (session) {
+	// 	return <button onClick={() => signOut()}>Sign out</button>;
+	// }
 	return (
 		<button
 			onClick={() => signIn('github')}

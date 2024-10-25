@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 import { useRef, useState } from 'react';
 import { greetingList } from '../data/greetings';
 import UserImg from '../public/assets/images/icons/shafin-logo.png';
@@ -33,8 +33,8 @@ const Hero = () => {
 		}, 50);
 	};
 	return (
-		<section>
-			<div className='flex items-center justify-center md:flex-row flex-col'>
+        (<section>
+            <div className='flex items-center justify-center md:flex-row flex-col'>
 				<div className='my-16'>
 					<div className='relative h-44 w-44 flex justify-center items-center'>
 						<div
@@ -44,11 +44,14 @@ const Hero = () => {
 						>
 							<div className='wrap-avater'>
 								<Image
-									src={UserImg}
-									alt='Avatar'
-									draggable='false'
-									className='!mb-6'
-								/>
+                                    src={UserImg}
+                                    alt='Avatar'
+                                    draggable='false'
+                                    className='!mb-6'
+                                    style={{
+                                        maxWidth: "100%",
+                                        height: "auto"
+                                    }} />
 							</div>
 							<div className='absolute bottom-0 flex-col items-center hidden w-32 -ml-[100px] mb-64 lg:group-hover:flex'>
 								<span className='p-2 w-32 h-[50px] relative z-10 text-xs leading-none text-sh-white whitespace-no-wrap bg-sh-dark shadow-lg rounded-md'>
@@ -93,7 +96,7 @@ const Hero = () => {
 					</h1>
 				</div>
 			</div>
-			<div
+            <div
 				className='absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6'
 				aria-hidden='true'
 			>
@@ -105,8 +108,8 @@ const Hero = () => {
 					}}
 				/>
 			</div>
-		</section>
-	);
+        </section>)
+    );
 };
 
 export default Hero;

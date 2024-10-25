@@ -1,13 +1,13 @@
-import Image from 'next/image';
+import Image from "next/image";
 const ProjectCard = ({ leftAlign, image, title, des, tech, url }) => {
 	return (
-		<div
+        (<div
 			className={
 				'flex justify-center ' +
 				(leftAlign ? 'lg:justify-end' : 'lg:justify-start')
 			}
 		>
-			<article className='relative inline-flex max-w-max'>
+            <article className='relative inline-flex max-w-max'>
 				<header
 					className={
 						'top-2/4 bottom-2/4 right-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 z-10 absolute flex items-center justify-center ml-0 ' +
@@ -50,18 +50,21 @@ const ProjectCard = ({ leftAlign, image, title, des, tech, url }) => {
 				<a href={url} target='_blank' rel='noopener noreferrer'>
 					<div className='opacity-25 md:opacity-50 hover:opacity-100 w-full md:w-[35rem] rounded-lg border-2 bg-sh-blue border-sh-blue relative scale-[.99] hover:scale-100 transition ease-in shadow-lg flex'>
 						<Image
-							className='w-full h-full rounded-lg'
-							src={image}
-							alt={title + ' image'}
-							objectFit='contain'
-							draggable='false'
-							placeholder='blur'
-						/>
+                            className='w-full h-full rounded-lg'
+                            src={image}
+                            alt={title + ' image'}
+                            draggable='false'
+                            placeholder='blur'
+                            style={{
+                                maxWidth: "100%",
+                                height: "auto",
+                                objectFit: "contain"
+                            }} />
 					</div>
 				</a>
 			</article>
-		</div>
-	);
+        </div>)
+    );
 };
 
 export default ProjectCard;
