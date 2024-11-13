@@ -16,7 +16,7 @@ export default function About() {
       <section>
         <Heading text={'Tech Stack'} />
 
-        <div className="mt-3 flex w-full flex-wrap gap-4 lg:px-5">
+        <div className="flex flex-wrap w-full gap-4 mt-3 lg:px-5">
           {skills.map((item) => (
             <SkillCap key={item.id} {...item} />
           ))}
