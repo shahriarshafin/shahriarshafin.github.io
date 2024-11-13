@@ -16,7 +16,7 @@
 
 <div align="center">
 <h1>
-<a href="https://shahriarshafin.vercel.app/" target="_blank">Shahriar Shafin</a>
+<a href="https://shafin.vercel.app/" target="_blank">Shahriar Shafin</a>
 </h1>
 A personal portfolio website to show skills, experiences, and projects
     <br/>
