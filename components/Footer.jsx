@@ -1,6 +1,5 @@
+import { socialMedia } from '@/app/data/data';
 import Link from 'next/link';
-
-import { socialMedia } from '../app/data/data';
 
 const Footer = () => {
   return (

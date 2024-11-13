@@ -1,8 +1,7 @@
 'use client';
 
+import { greetingList } from '@/app/data/greetings';
 import { useState } from 'react';
-
-import { greetingList } from '../app/data/greetings';
 
 const GreetingSwitcher = () => {
   const [arrItem, setArrItem] = useState(0);

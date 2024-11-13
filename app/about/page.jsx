@@ -1,8 +1,8 @@
-import EduCard from '../../components/educard';
-import Heading from '../../components/heading';
-import SkillCap from '../../components/skill-cap';
-import { companies, institutions } from '../data/data';
-import { skills } from '../data/skills';
+import { companies, institutions } from '@/app/data/data';
+import { skills } from '@/app/data/skills';
+import EduCard from '@/components/educard';
+import Heading from '@/components/heading';
+import SkillCap from '@/components/skill-cap';
 
 export const metadata = {
   title: 'About',

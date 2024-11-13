@@ -1,10 +1,10 @@
+import Footer from '@/components/footer';
+import Navbar from '@/components/navbar';
+import { BASE_URL } from '@/lib/constants';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { ViewTransitions } from 'next-view-transitions';
 import { Cabin } from 'next/font/google';
 
-import Footer from '../components/footer';
-import Navbar from '../components/navbar';
-import { BASE_URL } from '../lib/constants';
 import './globals.css';
 
 const cabin = Cabin({

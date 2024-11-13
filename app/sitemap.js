@@ -1,4 +1,4 @@
-import { BASE_URL } from '../lib/constants';
+import { BASE_URL } from '@/lib/constants';
 
 export default async function sitemap() {
   const routes = ['', '/about', '/projects', '/open-source'].map((route) => ({

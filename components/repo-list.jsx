@@ -1,4 +1,5 @@
-import { GITHUB_API_URL, GITHUB_USERNAME } from '../lib/constants';
+import { GITHUB_API_URL, GITHUB_USERNAME } from '@/lib/constants';
+
 import RepoCard from './repo-card';
 
 const RepoList = async () => {

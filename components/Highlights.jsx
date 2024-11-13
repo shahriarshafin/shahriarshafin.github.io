@@ -1,4 +1,4 @@
-import { highlightList } from '../app/data/highlights';
+import { highlightList } from '@/app/data/highlights';
 
 const Highlights = () => {
   return (

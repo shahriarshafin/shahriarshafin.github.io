@@ -1,8 +1,8 @@
+import { featuredRepositories } from '@/app/data/data';
+import { GITHUB_API_URL, GITHUB_USERNAME } from '@/lib/constants';
 import { Link } from 'next-view-transitions';
 import { HiCursorClick } from 'react-icons/hi';
 
-import { featuredRepositories } from '../app/data/data';
-import { GITHUB_API_URL, GITHUB_USERNAME } from '../lib/constants';
 import Heading from './heading';
 import RepoCard from './repo-card';
 

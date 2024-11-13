@@ -1,6 +1,5 @@
+import { shimmer, toBase64 } from '@/lib/utils';
 import Image from 'next/image';
-
-import { shimmer, toBase64 } from '../lib/utils';
 
 const EduCard = ({ institution, logo, degree, startDate, endDate }) => {
   return (

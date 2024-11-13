@@ -1,7 +1,6 @@
+import { shimmer, toBase64 } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
-
-import { shimmer, toBase64 } from '../lib/utils';
 
 const ProjectCard = ({ leftAlign, image, title, des, tech, url }) => {
   return (
