@@ -1,103 +1,89 @@
+'use client';
+
+import { Link } from 'next-view-transitions';
 import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
-import UserImg from '../public/assets/images/icons/icon-565x565.png';
 
 const NavBar = () => {
-	const router = useRouter();
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-	const webLinks = [
-		{ name: 'About', path: '/about' },
-		{ name: 'Projects', path: '/projects' },
-		{ name: 'Open Source', path: '/open-source' },
-	];
+  const webLinks = [
+    { name: 'About', path: '/about' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Open Source', path: '/open-source' }
+  ];
 
-	return (
-		<div className='fixed top-0 z-20 w-full shadow-lg bg-sh-dark-500 bg-opacity-80 backdrop-filter backdrop-blur-sm mb-28'>
-			<div className='max-w-[50rem] mx-auto w-full px-5 py-2.5 md:px-10 lg:px-0'>
-				<div className='flex items-center w-full'>
-					<div className='inline-flex items-center justify-start w-3/4'>
-						<div className='dropdown'>
-							<label
-								onClick={() => setIsMenuOpen(!isMenuOpen)}
-								className='md:hidden'
-							>
-								<HiOutlineMenuAlt1 className='p-2 mr-5 rounded-lg cursor-pointer bg-sh-dark h-9 w-9' />
-							</label>
-							{isMenuOpen && (
-								<ul className='border border-sh-white-500 bg-sh-dark-500 bg-opacity-[0.97] backdrop-filter shadow-lg shadow-sh-dark-500 rounded-md absolute mt-3 px-2 py-5 w-64 space-y-5'>
-									{webLinks.map((link, index) => (
-										<li key={index} onClick={() => setIsMenuOpen(false)}>
-											<Link
-												href={link.path}
-												className={
-													router.pathname == link.path
-														? 'menu-item active'
-														: 'menu-item'
-												}
-											>
-												{link.name}
-											</Link>
-										</li>
-									))}
-								</ul>
-							)}
-						</div>
-						<Link
-							href='/'
-							className='flex w-10 h-10 transition ease-in scale-90 border-2 rounded-full select-none border-sh-blue mr-7 hover:scale-100'
-						>
-							<Image
-								className='rounded-full'
-								src={UserImg}
-								alt='Shafin Avatar'
-								draggable='false'
-								style={{
-									maxWidth: '100%',
-									height: 'auto',
-									objectFit: 'contain',
-								}}
-							/>
-						</Link>
-						<div className='hidden md:flex'>
-							<ul className='inline-flex flex-row gap-3'>
-								{webLinks.map((link, index) => (
-									<li key={index}>
-										<Link
-											href={link.path}
-											className={
-												router.pathname == link.path
-													? 'menu-item active'
-													: 'menu-item'
-											}
-										>
-											{link.name}
-										</Link>
-									</li>
-								))}
-							</ul>
-						</div>
-					</div>
+  return (
+    <nav className="fixed top-0 z-20 mb-28 w-full bg-sh-dark-500 bg-opacity-80 shadow-lg backdrop-blur-sm backdrop-filter">
+      <div className="mx-auto w-full max-w-[50rem] px-5 py-2.5 md:px-10 lg:px-0">
+        <div className="flex w-full items-center">
+          <div className="inline-flex w-3/4 items-center justify-start">
+            <div className="dropdown">
+              <label onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden">
+                <HiOutlineMenuAlt1 className="mr-5 h-9 w-9 cursor-pointer rounded-lg bg-sh-dark p-2" />
+              </label>
+              {isMenuOpen && (
+                <ul className="absolute mt-3 w-64 space-y-5 rounded-md border border-sh-white-500 bg-sh-dark-500 bg-opacity-[0.97] px-2 py-5 shadow-lg shadow-sh-dark-500 backdrop-filter">
+                  {webLinks.map((link, index) => (
+                    <li key={index} onClick={() => setIsMenuOpen(false)}>
+                      <Link
+                        href={link.path}
+                        className={pathname === link.path ? 'menu-item active' : 'menu-item'}
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+            <Link
+              href="/"
+              className="mr-7 flex h-10 w-10 scale-90 select-none rounded-full border-2 border-sh-blue transition ease-in hover:scale-100"
+            >
+              <Image
+                className="rounded-full"
+                src="/images/icons/icon-72x72.png"
+                alt="Shafin's avatar"
+                draggable="false"
+                width={565}
+                height={565}
+              />
+            </Link>
+            <div className="hidden md:flex">
+              <ul className="inline-flex flex-row gap-3">
+                {webLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link
+                      href={link.path}
+                      className={pathname === link.path ? 'menu-item active' : 'menu-item'}
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
 
-					<div className='flex justify-end w-1/4 gap-3 text-xl'>
-						<a
-							target='_blank'
-							aria-label='github link'
-							rel='noopener noreferrer'
-							href='https://github.com/shahriarshafin'
-							className='p-3 transition ease-in cursor-pointer rounded-xl hover:bg-sh-dark'
-						>
-							<FaGithub />
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+          <div className="flex w-1/4 justify-end gap-3 text-xl">
+            <Link
+              target="_blank"
+              aria-label="github link"
+              href="https://github.com/shahriarshafin"
+              className="cursor-pointer rounded-xl p-3 transition ease-in hover:bg-sh-dark"
+            >
+              <FaGithub />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 export default NavBar;

@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="public/assets/images/icons/icon-384x384.png" alt="Logo" width="200">
+    <img src="public/images/icons/shafin-logo.png" alt="Logo" width="200">
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
 
 <div align="center">
 <h1>
-<a href="https://shafin.tech/" target="_blank">shafin.tech</a>
+<a href="https://shahriarshafin.vercel.app/" target="_blank">Shahriar Shafin</a>
 </h1>
 A personal portfolio website to show skills, experiences, and projects
     <br/>
@@ -60,8 +60,6 @@ That's All! Now open [localhost:3000](http://localhost:3000/) to see the app.
 ## Built with
 
 - **Framework**: [Next.js](https://nextjs.org/)
-- **Database**: [Supabase](https://supabase.com/)
-- **Authentication**: [NextAuth.js](https://next-auth.js.org/)
 - **API**: [Github API](https://api.github.com)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Icon Packs**: [React-Icons](https://react-icons.github.io/react-icons/)

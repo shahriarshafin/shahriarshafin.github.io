@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+  img[loading='lazy'] {
+    clip-path: inset(0.6px);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-[#171923] text-sh-white;
+  }
+  section {
+    @apply py-10;
+  }
+}
+
+@layer components {
+  .animate-up {
+    @apply !bg-[length:4px_3px] !bg-[0_100%] !bg-repeat-x transition-all duration-700 ease-out;
+  }
+  .animate-up:hover {
+    @apply !bg-[length:4px_50px];
+  }
+  .menu-item {
+    @apply flex rounded-md px-2.5 py-1.5 text-xl transition ease-in hover:bg-sh-dark/20 hover:text-sh-blue;
+  }
+  .active {
+    @apply bg-sh-dark text-sh-blue hover:bg-sh-dark;
+  }
+  .text-transparent {
+    color: transparent;
+  }
+  .wrap-avater {
+    --f: 1; /* initial scale */
+    @apply aspect-square w-[200px] rounded-[0_0_999px_999px] pt-10 outline outline-[3px] outline-offset-[-3px] outline-sh-blue duration-500;
+
+    background: radial-gradient(
+        circle closest-side,
+        #8e80c9 calc(99% - 3px),
+        #1985ff calc(100% - 3px) 99%,
+        #0000
+      )
+      50% / calc(100% / var(--f)) 100% no-repeat content-box;
+
+    mask:
+      linear-gradient(#000 0 0) no-repeat 50% 6px / calc(100% - 12px) 50%,
+      radial-gradient(circle closest-side, #000 99%, #0000) 50% / calc(100% / var(--f)) 100%
+        no-repeat content-box;
+
+    transform: scale(var(--f));
+  }
+  .wrap-avater:hover {
+    --f: 1.1;
+    background: radial-gradient(
+        circle closest-side,
+        #474064 calc(99% - 2px),
+        #1985ff calc(100% - 2px) 99%,
+        #0000
+      )
+      50% / calc(100% / var(--f)) 100% no-repeat content-box;
+  }
+}

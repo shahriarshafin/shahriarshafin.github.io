@@ -1,0 +1,12 @@
+{
+  "singleQuote": true,
+  "arrowParens": "always",
+  "trailingComma": "none",
+  "printWidth": 100,
+  "tabWidth": 2,
+  "endOfLine": "lf",
+  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+  "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
