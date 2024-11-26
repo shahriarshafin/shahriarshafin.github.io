@@ -92,7 +92,7 @@ export async function generateMetadata() {
       url: BASE_URL
     },
     icons: {
-      icon: '/icon.png'
+      icon: '/favicon.ico'
     },
     manifest: `${BASE_URL}/manifest.json`,
     robots: {
