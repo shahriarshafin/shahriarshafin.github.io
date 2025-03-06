@@ -8,15 +8,15 @@ const Footer = () => {
         <p className="order-2 md:order-1">© {new Date().getFullYear()} Shahriar Shafin</p>
         <div className="order-1 flex gap-3 text-lg md:order-2">
           {socialMedia.map((social) => (
-            <Link
+            <a
               key={social.id}
               href={social.url}
               aria-label={social.label}
               target="_blank"
-              className="rounded-xl p-3 transition ease-in hover:bg-sh-dark hover:text-sh-blue"
+              className="hover:text-primary hover:bg-background rounded-xl p-3 transition ease-in"
             >
               {social.icon}
-            </Link>
+            </a>
           ))}
         </div>
       </div>

@@ -4,10 +4,10 @@ import { BiGitRepoForked, BiStar } from 'react-icons/bi';
 
 const RepoCard = ({ html_url, name, stargazers_count, forks_count, description, topics }) => {
   return (
-    <article className="transform rounded-lg border-2 border-sh-dark bg-sh-dark-500 p-4 text-sh-white transition-transform ease-in hover:scale-[1.02] hover:shadow-lg">
+    <article className="bg-card border-background transform rounded-lg border-2 p-4 text-white transition-transform ease-in hover:scale-[1.02] hover:shadow-lg">
       <div className="flex h-[7.5rem] flex-col justify-between">
         <div className="mb-2 flex items-center justify-between">
-          <h2 className="inline-block text-lg font-bold text-sh-blue transition ease-in hover:text-sh-blue-500">
+          <h2 className="hover:text-primary-foreground text-primary inline-block text-lg font-bold transition ease-in">
             <Link href={html_url} target="_blank">
               {name}
             </Link>
@@ -25,12 +25,12 @@ const RepoCard = ({ html_url, name, stargazers_count, forks_count, description, 
           </div>
         </div>
 
-        <p className="h-12 overflow-hidden text-sh-white-500">{description}</p>
+        <p className="text-muted h-12 overflow-hidden">{description}</p>
 
         <ul className="mt-3 flex cursor-default gap-2">
           {topics?.slice(0, 3).map((topic, index) => (
             <li
-              className="overflow-hidden truncate rounded-3xl bg-sh-dark px-2 text-sm"
+              className="bg-background overflow-hidden truncate rounded-3xl px-2 text-sm"
               key={index}
             >
               {topic}

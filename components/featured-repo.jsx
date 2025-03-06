@@ -53,7 +53,7 @@ export default async function FeaturedRepo() {
       <div className="flex justify-center">
         <Link
           href="/open-source"
-          className="mt-10 flex w-auto justify-center gap-2 text-base text-sh-blue transition ease-in hover:text-sh-blue-500"
+          className="text-primary hover:text-primary-foreground mt-10 flex w-auto justify-center gap-2 text-base transition ease-in"
         >
           <span>More Repositories</span>
           <HiCursorClick className="inline-block text-xl" />

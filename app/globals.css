@@ -16,7 +16,7 @@
 
 @layer base {
   body {
-    @apply bg-[#171923] text-sh-white;
+    @apply bg-[#171923] text-white;
   }
   section {
     @apply py-10;
@@ -31,17 +31,17 @@
     @apply !bg-[length:4px_50px];
   }
   .menu-item {
-    @apply flex rounded-md px-2.5 py-1.5 text-xl transition ease-in hover:bg-sh-dark/20 hover:text-sh-blue;
+    @apply hover:text-primary hover:bg-background/20 flex rounded-md px-2.5 py-1.5 text-xl transition ease-in;
   }
   .active {
-    @apply bg-sh-dark text-sh-blue hover:bg-sh-dark;
+    @apply text-primary bg-background hover:bg-background;
   }
   .text-transparent {
     color: transparent;
   }
   .wrap-avater {
     --f: 1; /* initial scale */
-    @apply aspect-square w-[200px] rounded-[0_0_999px_999px] pt-10 outline outline-[3px] outline-offset-[-3px] outline-sh-blue duration-500;
+    @apply outline-primary aspect-square w-[200px] rounded-[0_0_999px_999px] pt-10 outline outline-[3px] outline-offset-[-3px] duration-500;
 
     background: radial-gradient(
         circle closest-side,

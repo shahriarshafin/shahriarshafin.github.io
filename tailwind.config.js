@@ -8,13 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'sh-white': '#EDEDEE',
-        'sh-white-500': '#929A9E',
-        'sh-blue': '#1A85FF',
-        'sh-blue-500': '#8AC5EB',
-        'sh-purple': '#ec4899',
-        'sh-dark': '#2D3748',
-        'sh-dark-500': '#1A202C'
+        background: '#2D3748',
+        primary: '#1A85FF',
+        'primary-foreground': '#8AC5EB',
+        secondary: '#ec4899',
+        card: '#1A202C',
+        muted: '#929A9E'
       },
       fontFamily: {
         cabin: ['"Cabin"', 'sans-serif']
