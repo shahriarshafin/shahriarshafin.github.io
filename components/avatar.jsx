@@ -1,7 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import { useRef, useState } from 'react';
+
+import Image from 'next/image';
 
 const Avatar = () => {
   const typingIntervalRef = useRef(null);
@@ -47,10 +48,10 @@ const Avatar = () => {
           />
         </div>
         <div className="absolute bottom-0 -ml-[100px] mb-56 hidden w-32 flex-col items-center lg:group-hover:flex">
-          <p className="whitespace-no-wrap bg-background relative z-10 h-[50px] w-32 rounded-md p-2 text-xs leading-none text-white shadow-lg">
+          <p className="whitespace-no-wrap relative z-10 h-[50px] w-32 rounded-md bg-background p-2 text-xs leading-none text-white shadow-lg">
             {typedText}
           </p>
-          <div className='before:border-r-background before:border-t-background before:absolute before:-bottom-3 before:right-3 before:h-0 before:w-0 before:border-b-[20px] before:border-l-[12px] before:border-r-[24px] before:border-t-[12px] before:border-b-transparent before:border-l-transparent before:content-[""]'></div>
+          <div className='before:absolute before:-bottom-3 before:right-3 before:h-0 before:w-0 before:border-b-[20px] before:border-l-[12px] before:border-r-[24px] before:border-t-[12px] before:border-b-transparent before:border-l-transparent before:border-r-background before:border-t-background before:content-[""]'></div>
         </div>
       </div>
     </div>

@@ -1,7 +1,8 @@
-import { projectList } from '@/app/data/projects';
 import Description from '@/components/description';
 import Heading from '@/components/heading';
 import ProjectCard from '@/components/project-card';
+
+import { projectList } from '@/app/data/projects';
 
 export const metadata = {
   title: 'Projects',

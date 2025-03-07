@@ -1,5 +1,6 @@
-import { socialMedia } from '@/app/data/data';
 import Link from 'next/link';
+
+import { socialMedia } from '@/app/data/data';
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
               href={social.url}
               aria-label={social.label}
               target="_blank"
-              className="hover:text-primary hover:bg-background rounded-xl p-3 transition ease-in"
+              className="rounded-xl p-3 transition ease-in hover:bg-background hover:text-primary"
             >
               {social.icon}
             </a>

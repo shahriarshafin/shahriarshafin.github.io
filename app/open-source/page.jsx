@@ -1,8 +1,9 @@
+import { Suspense } from 'react';
+
 import Description from '@/components/description';
 import Heading from '@/components/heading';
 import RepoList from '@/components/repo-list';
 import RepoSkeleton from '@/components/repo-skeleton';
-import { Suspense } from 'react';
 
 export const metadata = {
   title: 'Open Source',

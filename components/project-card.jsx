@@ -1,6 +1,7 @@
-import { shimmer, toBase64 } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
+
+import { shimmer, toBase64 } from '@/lib/utils';
 
 const ProjectCard = ({ leftAlign, image, title, des, tech, url }) => {
   return (
@@ -28,7 +29,7 @@ const ProjectCard = ({ leftAlign, image, title, des, tech, url }) => {
 
             <p
               className={
-                'bg-card border-background w-72 rounded-lg border-2 p-4 text-left text-xs md:w-80 md:text-base ' +
+                'w-72 rounded-lg border-2 border-background bg-card p-4 text-left text-xs md:w-80 md:text-base ' +
                 (leftAlign ? 'md:text-left' : 'md:text-right')
               }
             >
@@ -36,7 +37,7 @@ const ProjectCard = ({ leftAlign, image, title, des, tech, url }) => {
             </p>
             <ul
               className={
-                'text-muted flex cursor-default gap-5 p-2 text-xs md:text-base ' +
+                'flex cursor-default gap-5 p-2 text-xs text-muted md:text-base ' +
                 (leftAlign ? 'justify-start' : 'justify-start lg:justify-end')
               }
             >
@@ -48,7 +49,7 @@ const ProjectCard = ({ leftAlign, image, title, des, tech, url }) => {
         </header>
 
         <Link href={url} target="_self">
-          <div className="border-primary bg-primary relative flex w-full scale-[.99] rounded-lg border-2 opacity-25 shadow-lg transition ease-in hover:scale-100 hover:opacity-100 md:w-[35rem] md:opacity-50">
+          <div className="relative flex w-full scale-[.99] rounded-lg border-2 border-primary bg-primary opacity-25 shadow-lg transition ease-in hover:scale-100 hover:opacity-100 md:w-[35rem] md:opacity-50">
             <Image
               className="h-full w-full rounded-lg"
               src={image}

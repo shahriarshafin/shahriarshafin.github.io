@@ -1,7 +1,9 @@
-import { featuredRepositories } from '@/app/data/data';
-import { GITHUB_API_URL, GITHUB_USERNAME } from '@/lib/constants';
 import { Link } from 'next-view-transitions';
 import { HiCursorClick } from 'react-icons/hi';
+
+import { GITHUB_API_URL, GITHUB_USERNAME } from '@/lib/constants';
+
+import { featuredRepositories } from '@/app/data/data';
 
 import Heading from './heading';
 import RepoCard from './repo-card';
@@ -53,7 +55,7 @@ export default async function FeaturedRepo() {
       <div className="flex justify-center">
         <Link
           href="/open-source"
-          className="text-primary hover:text-primary-foreground mt-10 flex w-auto justify-center gap-2 text-base transition ease-in"
+          className="mt-10 flex w-auto justify-center gap-2 text-base text-primary transition ease-in hover:text-primary-foreground"
         >
           <span>More Repositories</span>
           <HiCursorClick className="inline-block text-xl" />
