@@ -1,16 +1,87 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@theme {
+  --color-background: #2d3748;
+  --color-primary: #1a85ff;
+  --color-primary-foreground: #8ac5eb;
+  --color-secondary: #ec4899;
+  --color-card: #1a202c;
+  --color-muted: #929a9e;
+
+  --font-cabin: 'Cabin', sans-serif;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
   }
 }
 
-@supports (font: -apple-system-body) and (-webkit-appearance: none) {
-  img[loading='lazy'] {
-    clip-path: inset(0.6px);
+@utility animate-up {
+  @apply bg-size-[4px_3px]! bg-bottom! bg-repeat-x! transition-all duration-700 ease-out;
+
+  &:hover {
+    @apply bg-size-[4px_50px]!;
+  }
+}
+
+@utility menu-item {
+  @apply flex px-2.5 py-1.5 text-xl rounded-md transition ease-in hover:text-primary hover:bg-background/20;
+}
+
+@utility active {
+  @apply text-primary bg-background hover:bg-background;
+}
+
+@utility text-transparent {
+  color: transparent;
+}
+
+@utility wrap-avater {
+  --f: 1; /* initial scale */
+  @apply outline-primary aspect-square w-[200px] rounded-[0_0_999px_999px] pt-10 outline-solid outline-[3px] outline-offset-[-3px] duration-500;
+
+  background: radial-gradient(
+      circle closest-side,
+      #8e80c9 calc(99% - 3px),
+      #1985ff calc(100% - 3px) 99%,
+      #0000
+    )
+    50% / calc(100% / var(--f)) 100% no-repeat content-box;
+
+  mask:
+    linear-gradient(#000 0 0) no-repeat 50% 6px / calc(100% - 12px) 50%,
+    radial-gradient(circle closest-side, #000 99%, #0000) 50% /
+      calc(100% / var(--f)) 100% no-repeat content-box;
+
+  transform: scale(var(--f));
+  &:hover {
+    --f: 1.1;
+    background: radial-gradient(
+        circle closest-side,
+        #474064 calc(99% - 2px),
+        #1985ff calc(100% - 2px) 99%,
+        #0000
+      )
+      50% / calc(100% / var(--f)) 100% no-repeat content-box;
+  }
+}
+
+@layer utilities {
+  @media (prefers-color-scheme: dark) {
+    html {
+      color-scheme: dark;
+    }
+  }
+
+  @supports (font: -apple-system-body) and (-webkit-appearance: none) {
+    img[loading='lazy'] {
+      clip-path: inset(0.6px);
+    }
   }
 }
 
@@ -20,52 +91,5 @@
   }
   section {
     @apply py-10;
-  }
-}
-
-@layer components {
-  .animate-up {
-    @apply !bg-[length:4px_3px] !bg-[0_100%] !bg-repeat-x transition-all duration-700 ease-out;
-  }
-  .animate-up:hover {
-    @apply !bg-[length:4px_50px];
-  }
-  .menu-item {
-    @apply hover:text-primary hover:bg-background/20 flex rounded-md px-2.5 py-1.5 text-xl transition ease-in;
-  }
-  .active {
-    @apply text-primary bg-background hover:bg-background;
-  }
-  .text-transparent {
-    color: transparent;
-  }
-  .wrap-avater {
-    --f: 1; /* initial scale */
-    @apply outline-primary aspect-square w-[200px] rounded-[0_0_999px_999px] pt-10 outline outline-[3px] outline-offset-[-3px] duration-500;
-
-    background: radial-gradient(
-        circle closest-side,
-        #8e80c9 calc(99% - 3px),
-        #1985ff calc(100% - 3px) 99%,
-        #0000
-      )
-      50% / calc(100% / var(--f)) 100% no-repeat content-box;
-
-    mask:
-      linear-gradient(#000 0 0) no-repeat 50% 6px / calc(100% - 12px) 50%,
-      radial-gradient(circle closest-side, #000 99%, #0000) 50% / calc(100% / var(--f)) 100%
-        no-repeat content-box;
-
-    transform: scale(var(--f));
-  }
-  .wrap-avater:hover {
-    --f: 1.1;
-    background: radial-gradient(
-        circle closest-side,
-        #474064 calc(99% - 2px),
-        #1985ff calc(100% - 2px) 99%,
-        #0000
-      )
-      50% / calc(100% / var(--f)) 100% no-repeat content-box;
   }
 }

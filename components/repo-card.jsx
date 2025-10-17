@@ -7,7 +7,7 @@ import { BiGitRepoForked, BiStar } from 'react-icons/bi';
 const RepoCard = ({ html_url, name, stargazers_count, forks_count, description, topics }) => {
   return (
     <article className="transform rounded-lg border-2 border-background bg-card p-4 text-white transition-transform ease-in hover:scale-[1.02] hover:shadow-lg">
-      <div className="flex h-[7.5rem] flex-col justify-between">
+      <div className="flex h-30 flex-col justify-between">
         <div className="mb-2 flex items-center justify-between">
           <h2 className="inline-block text-lg font-bold text-primary transition ease-in hover:text-primary-foreground">
             <Link href={html_url} target="_blank">

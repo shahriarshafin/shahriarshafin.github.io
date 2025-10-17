@@ -3,9 +3,9 @@
 import { useState } from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { Link } from 'next-view-transitions';
 import { FaGithub } from 'react-icons/fa';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 
@@ -20,8 +20,8 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 z-20 mb-28 w-full bg-card bg-opacity-80 shadow-lg backdrop-blur-sm backdrop-filter">
-      <div className="mx-auto w-full max-w-[50rem] px-5 py-2.5 md:px-10 lg:px-0">
+    <nav className="fixed top-0 z-20 mb-28 w-full bg-card bg-opacity-80 shadow-lg backdrop-blur-xs backdrop-filter">
+      <div className="mx-auto w-full max-w-200 px-5 py-2.5 md:px-10 lg:px-0">
         <div className="flex w-full items-center">
           <div className="inline-flex w-3/4 items-center justify-start">
             <div className="dropdown">

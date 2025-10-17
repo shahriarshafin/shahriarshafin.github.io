@@ -1,7 +1,6 @@
 import { Cabin } from 'next/font/google';
 
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
-import { ViewTransitions } from 'next-view-transitions';
 
 import { BASE_URL } from '@/lib/constants';
 
@@ -116,20 +115,18 @@ export async function generateMetadata() {
 
 export default function RootLayout({ children }) {
   return (
-    <ViewTransitions>
-      <html lang="en" className={`${cabin.className} h-full scroll-smooth`}>
-        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GA_TRACKING_ID} />
-        <body className="antialiased">
-          <Navbar />
-          <main className="relative isolate overflow-hidden">
-            <div className="mx-auto min-h-svh w-full max-w-[50rem] px-5 py-3 pt-16 md:px-10 lg:px-0">
-              {children}
-            </div>
-          </main>
-          <Footer />
-        </body>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_TRACKING_ID} />
-      </html>
-    </ViewTransitions>
+    <html lang="en" className={`${cabin.className} h-full scroll-smooth`}>
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GA_TRACKING_ID} />
+      <body className="antialiased">
+        <Navbar />
+        <main className="relative isolate overflow-hidden">
+          <div className="mx-auto min-h-svh w-full max-w-200 px-5 py-3 pt-16 md:px-10 lg:px-0">
+            {children}
+          </div>
+        </main>
+        <Footer />
+      </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_TRACKING_ID} />
+    </html>
   );
 }

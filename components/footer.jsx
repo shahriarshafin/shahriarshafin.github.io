@@ -4,7 +4,7 @@ import { socialMedia } from '@/app/data/data';
 
 const Footer = () => {
   return (
-    <footer className="mx-auto w-full max-w-[50rem] px-10 py-2 md:px-0">
+    <footer className="mx-auto w-full max-w-200 px-10 py-2 md:px-0">
       <div className="flex flex-col items-center justify-between gap-2 p-4 md:flex-row">
         <p className="order-2 md:order-1">© {new Date().getFullYear()} Shahriar Shafin</p>
         <div className="order-1 flex gap-3 text-lg md:order-2">

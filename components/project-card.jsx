@@ -12,7 +12,7 @@ const ProjectCard = ({ leftAlign, image, title, des, tech, url }) => {
         <header
           className={
             'absolute bottom-2/4 left-2/4 right-2/4 top-2/4 z-10 ml-0 flex -translate-x-2/4 -translate-y-2/4 items-center justify-center ' +
-            (leftAlign ? 'lg:-ml-[22.5rem]' : 'lg:ml-[22.5rem]')
+            (leftAlign ? 'lg:-ml-90' : 'lg:ml-90')
           }
         >
           <div>
@@ -49,7 +49,7 @@ const ProjectCard = ({ leftAlign, image, title, des, tech, url }) => {
         </header>
 
         <Link href={url} target="_self">
-          <div className="relative flex w-full scale-[.99] rounded-lg border-2 border-primary bg-primary opacity-25 shadow-lg transition ease-in hover:scale-100 hover:opacity-100 md:w-[35rem] md:opacity-50">
+          <div className="relative flex w-full scale-[.99] rounded-lg border-2 border-primary bg-primary opacity-25 shadow-lg transition ease-in hover:scale-100 hover:opacity-100 md:w-140 md:opacity-50">
             <Image
               className="h-full w-full rounded-lg"
               src={image}

@@ -10,26 +10,20 @@
     "build": "next build",
     "start": "next start",
     "preview": "next build && next start",
-    "lint": "next lint",
-    "fmt": "prettier --write \"**/*.{js,jsx,ts,tsx,mdx,json}\" --cache",
-    "fmt:check": "prettier --check \"**/*.{js,jsx,ts,tsx,mdx,json}\" --cache"
+    "lint": "biome check .",
+    "lint:fix": "biome check . --write"
   },
   "dependencies": {
-    "@next/third-parties": "^15.0.1",
-    "next": "^15.0.3",
-    "next-view-transitions": "^0.3.2",
-    "react": "19.0.0-rc-69d4b800-20241021",
-    "react-dom": "19.0.0-rc-69d4b800-20241021",
+    "@next/third-parties": "^15.5.6",
+    "next": "^15.5.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "react-icons": "^4.4.0"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^9.14.0",
-    "eslint-config-next": "^15.0.3",
-    "postcss": "^8.4.49",
-    "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.8",
-    "tailwindcss": "^3.4.14"
+    "@biomejs/biome": "2.2.6",
+    "@tailwindcss/postcss": "^4.1.14",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.14"
   }
 }

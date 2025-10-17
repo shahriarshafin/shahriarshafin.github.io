@@ -1,4 +1,5 @@
-import { Link } from 'next-view-transitions';
+import Link from 'next/link';
+
 import { HiCursorClick } from 'react-icons/hi';
 
 import { GITHUB_API_URL, GITHUB_USERNAME } from '@/lib/constants';

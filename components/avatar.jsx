@@ -51,7 +51,7 @@ const Avatar = () => {
           <p className="whitespace-no-wrap relative z-10 h-[50px] w-32 rounded-md bg-background p-2 text-xs leading-none text-white shadow-lg">
             {typedText}
           </p>
-          <div className='before:absolute before:-bottom-3 before:right-3 before:h-0 before:w-0 before:border-b-[20px] before:border-l-[12px] before:border-r-[24px] before:border-t-[12px] before:border-b-transparent before:border-l-transparent before:border-r-background before:border-t-background before:content-[""]'></div>
+          <div className='before:absolute before:-bottom-3 before:right-3 before:h-0 before:w-0 before:border-b-20 before:border-l-12 before:border-r-24 before:border-t-12 before:border-b-transparent before:border-l-transparent before:border-r-background before:border-t-background before:content-[""]'></div>
         </div>
       </div>
     </div>
