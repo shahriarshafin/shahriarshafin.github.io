@@ -4,7 +4,16 @@ import Link from 'next/link';
 
 import { BiGitRepoForked, BiStar } from 'react-icons/bi';
 
-const RepoCard = ({ html_url, name, stargazers_count, forks_count, description, topics }) => {
+interface RepoCardProps {
+  html_url: string;
+  name: string;
+  stargazers_count: number;
+  forks_count: number;
+  description: string | null;
+  topics?: string[];
+}
+
+const RepoCard = ({ html_url, name, stargazers_count, forks_count, description, topics }: RepoCardProps) => {
   return (
     <article className="transform rounded-lg border-2 border-background bg-card p-4 text-white transition-transform ease-in hover:scale-[1.02] hover:shadow-lg">
       <div className="flex h-30 flex-col justify-between">

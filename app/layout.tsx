@@ -113,10 +113,10 @@ export async function generateMetadata() {
   };
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <html lang="en" className={`${cabin.className} h-full scroll-smooth`}>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GA_TRACKING_ID} />
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GA_TRACKING_ID || ''}  />
       <body className="antialiased">
         <Navbar />
         <main className="relative isolate overflow-hidden">
@@ -126,7 +126,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
       </body>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_TRACKING_ID} />
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_TRACKING_ID || ''} />
     </html>
   );
 }

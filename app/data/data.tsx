@@ -1,4 +1,12 @@
+import { ReactElement } from 'react';
 import { FaDribbble, FaGithub, FaLinkedin, FaRegEnvelope } from 'react-icons/fa';
+
+export interface SocialMediaItem {
+  id: number;
+  label: string;
+  icon: ReactElement;
+  url: string;
+}
 
 export const featuredRepositories = [
   'myportfolio',
@@ -61,7 +69,7 @@ export const institutions = [
   // },
 ];
 
-export const socialMedia = [
+export const socialMedia: SocialMediaItem[] = [
   {
     id: 1,
     label: 'Github',

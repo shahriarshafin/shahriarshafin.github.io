@@ -2,7 +2,15 @@ import Image from 'next/image';
 
 import { shimmer, toBase64 } from '@/lib/utils';
 
-const EduCard = ({ institution, logo, degree, startDate, endDate }) => {
+interface EduCardProps {
+  institution: string;
+  logo: string;
+  degree: string;
+  startDate: string;
+  endDate: string;
+}
+
+const EduCard = ({ institution, logo, degree, startDate, endDate }: EduCardProps) => {
   return (
     <article className="transform items-center gap-3 rounded-lg border-2 border-background bg-card p-4 text-white transition-transform ease-in hover:scale-[1.02] hover:shadow-lg md:flex">
       <div className="flex items-center gap-3">

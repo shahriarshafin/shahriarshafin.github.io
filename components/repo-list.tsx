@@ -1,6 +1,15 @@
 import { GITHUB_API_URL, GITHUB_USERNAME } from '@/lib/constants';
-
 import RepoCard from './repo-card';
+
+interface GitHubRepo {
+  id: number;
+  html_url: string;
+  name: string;
+  stargazers_count: number;
+  forks_count: number;
+  description: string | null;
+  topics: string[];
+}
 
 const RepoList = async () => {
   const res = await fetch(`${GITHUB_API_URL}/users/${GITHUB_USERNAME}/repos`, {
@@ -10,12 +19,12 @@ const RepoList = async () => {
   return (
     <>
       {data
-        .sort((a, b) => {
+        .sort((a: GitHubRepo, b: GitHubRepo) => {
           if (a.stargazers_count > b.stargazers_count) return -1;
           else if (a.stargazers_count < b.stargazers_count) return 1;
           return 0;
         })
-        .map((item) => (
+        .map((item: GitHubRepo) => (
           <RepoCard
             key={item.id}
             html_url={item.html_url}

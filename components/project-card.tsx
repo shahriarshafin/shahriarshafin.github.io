@@ -3,7 +3,16 @@ import Link from 'next/link';
 
 import { shimmer, toBase64 } from '@/lib/utils';
 
-const ProjectCard = ({ leftAlign, image, title, des, tech, url }) => {
+interface ProjectCardProps {
+  leftAlign?: boolean;
+  image: string;
+  title: string;
+  des: string;
+  tech: string[];
+  url: string;
+}
+
+const ProjectCard = ({ leftAlign, image, title, des, tech, url }: ProjectCardProps) => {
   return (
     <article
       className={'flex justify-center ' + (leftAlign ? 'lg:justify-end' : 'lg:justify-start')}

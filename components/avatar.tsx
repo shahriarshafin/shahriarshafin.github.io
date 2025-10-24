@@ -1,11 +1,11 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
 import Image from 'next/image';
 
 const Avatar = () => {
-  const typingIntervalRef = useRef(null);
+  const typingIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const [typedText, setTypedText] = useState('');
   const fullText = "Hey, It's so nice to see you here, thanks for visiting !";
 
@@ -14,17 +14,30 @@ const Avatar = () => {
   };
 
   const handleMouseLeave = () => {
-    clearInterval(typingIntervalRef.current);
+    if (typingIntervalRef.current) {
+      clearInterval(typingIntervalRef.current);
+      typingIntervalRef.current = null;
+    }
     setTypedText('');
   };
+
+  // Cleanup interval on component unmount
+  useEffect(() => {
+    return () => {
+      if (typingIntervalRef.current) {
+        clearInterval(typingIntervalRef.current);
+      }
+    };
+  }, []);
 
   const startTypingAnimation = () => {
     let index = 0;
     typingIntervalRef.current = setInterval(() => {
       setTypedText(fullText.substring(0, index));
       index++;
-      if (index > fullText.length) {
+      if (index > fullText.length && typingIntervalRef.current) {
         clearInterval(typingIntervalRef.current);
+        typingIntervalRef.current = null;
       }
     }, 50);
   };

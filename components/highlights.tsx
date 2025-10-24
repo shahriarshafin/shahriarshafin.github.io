@@ -15,7 +15,11 @@ const Highlights = () => {
   );
 };
 
-const HighlightPoint = ({ text }) => (
+interface HighlightPointProps {
+  text: string;
+}
+
+const HighlightPoint = ({ text }: HighlightPointProps) => (
   <li className="flex cursor-default items-center transition ease-in hover:text-primary-foreground">
     <div className="mr-2 h-1.5 w-1.5 rounded-full bg-white"></div>
     {text}
