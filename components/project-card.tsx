@@ -8,11 +8,11 @@ interface ProjectCardProps {
   image: string;
   title: string;
   des: string;
-  tech: string[];
+  tags: string[];
   url: string;
 }
 
-const ProjectCard = ({ leftAlign, image, title, des, tech, url }: ProjectCardProps) => {
+const ProjectCard = ({ leftAlign, image, title, des, tags, url }: ProjectCardProps) => {
   return (
     <article
       className={'flex justify-center ' + (leftAlign ? 'lg:justify-end' : 'lg:justify-start')}
@@ -31,9 +31,13 @@ const ProjectCard = ({ leftAlign, image, title, des, tech, url }: ProjectCardPro
                 (leftAlign ? 'md:text-left' : 'md:text-right')
               }
             >
-              <Link href={url} target="_self">
-                {title}
-              </Link>
+              {url ? (
+                <Link href={url} target="_blank">
+                  {title}
+                </Link>
+              ) : (
+                title
+              )}
             </h2>
 
             <p
@@ -50,14 +54,28 @@ const ProjectCard = ({ leftAlign, image, title, des, tech, url }: ProjectCardPro
                 (leftAlign ? 'justify-start' : 'justify-start lg:justify-end')
               }
             >
-              {tech.map((tech, index) => (
-                <li key={index}>{tech}</li>
+              {tags.map((tag, index) => (
+                <li key={index}>{tag}</li>
               ))}
             </ul>
           </div>
         </header>
 
-        <Link href={url} target="_self">
+        {url ? (
+          <Link href={url} target="_blank">
+            <div className="relative flex w-full scale-[.99] rounded-lg border-2 border-primary bg-primary opacity-25 shadow-lg transition ease-in hover:scale-100 hover:opacity-100 md:w-140 md:opacity-50">
+              <Image
+                className="h-full w-full rounded-lg"
+                src={image}
+                alt={`Project - ${title}`}
+                draggable="false"
+                width={1994}
+                height={1314}
+                placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(1994, 1314))}`}
+              />
+            </div>
+          </Link>
+        ) : (
           <div className="relative flex w-full scale-[.99] rounded-lg border-2 border-primary bg-primary opacity-25 shadow-lg transition ease-in hover:scale-100 hover:opacity-100 md:w-140 md:opacity-50">
             <Image
               className="h-full w-full rounded-lg"
@@ -69,7 +87,7 @@ const ProjectCard = ({ leftAlign, image, title, des, tech, url }: ProjectCardPro
               placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(1994, 1314))}`}
             />
           </div>
-        </Link>
+        )}
       </div>
     </article>
   );
