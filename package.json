@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@next/third-parties": "16.0.0",
-    "next": "16.0.0",
+    "next": "16.0.10",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-icons": "^4.4.0"
