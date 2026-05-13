@@ -11,7 +11,7 @@ export const projectList = [
     id: 2,
     title: 'Taskeasy',
     des: 'Taskeasy is a workflow Automation Tool for large and small teams that can connect apps and automate workflows, just like Zapier. It offers a simple setup and allows users to automate processes without a developer.',
-    tags: ['Automation', 'NextJS', 'Productivity'],
+    tags: ['Automation', 'Productivity','NextJS', ],
     url: '',
     image: '/images/projects/taskeasy.png'
   },
@@ -19,26 +19,28 @@ export const projectList = [
     id: 3,
     title: 'Rutugo',
     des: "A travel planning app with personalized tour plans based on users' budgets, preferred themes, group sizes, journey dates etc. Powered by OpenAI API, Rutugo creates unforgettable vacations tailored specifically for each traveler.",
-    tags: ['OpenAI', 'Planner', 'Travel'],
+    tags: ['Travel', 'Planner','OpenAI', ],
     url: 'https://www.rutugo.com/',
     image: '/images/projects/rutugo.png'
   },
+
   {
     id: 4,
+    title: 'Drill AI',
+    des: 'An industrial AI intelligence platform for the oil and gas sector that leverages an AI Agent to provide real-time geological insights. It integrates OpenAI and Gemini to analyze complex well logs and rock composition data, enabling users to query drilling operations through an automated chat interface.',
+    tags: ['AI Agent','Chatbot', 'AI SDK', ],
+    url: '',
+    image: '/images/projects/drill-ai.png'
+  },
+   {
+    id: 5,
     title: 'ShopBD',
     des: 'A high-performance, server-rendered Next.js App Router ecommerce application. It uses React Server Components, Server Actions, Suspense, useOptimistic, and more.',
     tags: ['Ecommerce', 'NextJS', 'ShadcnUI'],
     url: '',
     image: '/images/projects/shopbd.png'
   },
-  {
-    id: 5,
-    title: 'Face-Hand Tracker',
-    des: 'MediaPipe in a Next.js app enables real-time face and hand detection directly in the browser, ensuring low latency, privacy, and cost efficiency. It leverages FaceMesh and Hand Tracking for fast, responsive tracking on web and mobile.',
-    tags: ['Mediapipe', 'OnDeviceAI', 'Tracking'],
-    url: 'https://face-hand-tracker.vercel.app/',
-    image: '/images/projects/face-hand-tracker.png'
-  },
+
   {
     id: 6,
     title: 'Rtx Server',
@@ -49,6 +51,14 @@ export const projectList = [
   },
   {
     id: 7,
+    title: 'Face-Hand Tracker',
+    des: 'MediaPipe in a Next.js app enables real-time face and hand detection directly in the browser, ensuring low latency, privacy, and cost efficiency. It leverages FaceMesh and Hand Tracking for fast, responsive tracking on web and mobile.',
+    tags: ['Mediapipe', 'OnDeviceAI', 'Tracking'],
+    url: 'https://face-hand-tracker.vercel.app/',
+    image: '/images/projects/face-hand-tracker.png'
+  },
+  {
+    id: 8,
     title: 'UAP CSE',
     des: 'As CSE students at the University of Asia Pacific, taking on the responsibility to redesign and rebuild our Departmental Website was an incredible opportunity. This project marked the beginning of my journey into web development.',
     tags: ['Education', 'Portal', 'Django'],
